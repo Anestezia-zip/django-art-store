@@ -11,6 +11,8 @@ body {
     font-family: 'Lato';
 }
 
+// -------------------------------------- Hero --------------------------------------
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -61,6 +63,30 @@ body {
     background: #000 !important;
 }
 
+.search {
+
+    &-input {
+        width: 80%;
+        padding: 8px 12px;
+        border: 1px solid gray;
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+    }
+
+    &-button {
+        padding: 4px 10px;
+        background-color:#27563A;
+        border: 1px solid #193625;
+        color: #fff;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+    }    
+}
+
+.fa-search {
+    background-color: #27563A;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -82,5 +108,11 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        margin-top: 200px;
     }
 }
