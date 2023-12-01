@@ -47,12 +47,12 @@
         "fields": {
             "sku": "pp5001890157",
             "name": "Mediterranean",
-            "description": "",
-            "price": 169.99,
-            "category": 7,
-            "rating": 3.0,
+            "description": "I wish it had happened at a different time - not mine",
+            "price": 360,
+            "category": 2,
+            "rating": 4.0,
             "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": "DP0716201503423610M.jpg"
+            "image": "mediterranean.jpg"
         }
     },
     {

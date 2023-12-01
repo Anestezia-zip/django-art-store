@@ -3,72 +3,80 @@
         "pk": 1,
         "model": "products.category",
         "fields": {
-            "name": "activewear",
-            "friendly_name": "Activewear"
+            "name": "sunset",
+            "friendly_name": "Sunset"
         }
     },
     {
         "pk": 2,
         "model": "products.category",
         "fields": {
-            "name": "bed_bath",
-            "friendly_name": "Bed & Bath"
+            "name": "cliffs",
+            "friendly_name": "Cliffs"
         }
     },
     {
         "pk": 3,
         "model": "products.category",
         "fields": {
-            "name": "clearance",
-            "friendly_name": "Clearance"
+            "name": "nature",
+            "friendly_name": "Nature"
         }
     },
     {
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "deals",
-            "friendly_name": "Deals"
+            "name": "roofs",
+            "friendly_name": "Roofs"
         }
     },
     {
         "pk": 5,
         "model": "products.category",
         "fields": {
-            "name": "essentials",
-            "friendly_name": "Essentials"
+            "name": "kyiv",
+            "friendly_name": "Kyiv"
         }
     },
     {
         "pk": 6,
         "model": "products.category",
         "fields": {
-            "name": "jeans",
-            "friendly_name": "Jeans"
+            "name": "travelling",
+            "friendly_name": "Travelling"
         }
     },
     {
         "pk": 7,
         "model": "products.category",
         "fields": {
-            "name": "kitchen_dining",
-            "friendly_name": "Kitchen & Dining"
+            "name": "freighthop",
+            "friendly_name": "Freighthop"
         }
     },
     {
         "pk": 8,
         "model": "products.category",
         "fields": {
-            "name": "new_arrivals",
-            "friendly_name": "New Arrivals"
+            "name": "industrial-zone",
+            "friendly_name": "Industrial Zone"
         }
     },
     {
         "pk": 9,
         "model": "products.category",
         "fields": {
-            "name": "shirts",
-            "friendly_name": "Shirts"
+            "name": "subway",
+            "friendly_name": "Subway"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+            "name": "portrait",
+            "friendly_name": "Portrait"
         }
     }
 ]
