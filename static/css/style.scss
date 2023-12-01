@@ -11,7 +11,13 @@ body {
     font-family: 'Lato';
 }
 
-// -------------------------------------- Hero --------------------------------------
+// -------------------------------------- Main Navigation --------------------------------------
+
+.navi {
+    background-color: #0000006b;
+    
+    
+}
 
 /* from Bulma */
 .icon {
@@ -80,11 +86,11 @@ body {
         color: #fff;
         border-bottom-right-radius: 12px;
         border-top-right-radius: 12px;
-    }    
-}
+    }
 
-.fa-search {
-    background-color: #27563A;
+    .fa-search {
+        background-color: #27563A;
+    }
 }
 
 /* -------------------------------- Media Queries */

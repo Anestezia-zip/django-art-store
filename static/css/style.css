@@ -10,6 +10,10 @@ body {
   font-family: "Lato";
 }
 
+.navi {
+  background-color: rgba(0, 0, 0, 0.4196078431);
+}
+
 /* from Bulma */
 .icon {
   align-items: center;
@@ -76,8 +80,7 @@ body {
   border-bottom-right-radius: 12px;
   border-top-right-radius: 12px;
 }
-
-.fa-search {
+.search .fa-search {
   background-color: #27563A;
 }
 
