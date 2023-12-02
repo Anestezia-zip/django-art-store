@@ -108,6 +108,19 @@ body {
   z-index: -1;
 }
 
+.btt-button {
+  width: 42px;
+  height: 42px;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 30px;
+  right: 30px;
+}
+
+.btt-link {
+  cursor: pointer;
+}
+
 /* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
