@@ -5,9 +5,9 @@
                 Sort by
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Price</a>
-                <a href="" class="dropdown-item ">Date</a>
-                <a href="" class="dropdown-item ">Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Price</a>
+                <a href="{% url 'products' %}?sort=date&direction=asc" class="dropdown-item ">Date</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Paintings</a>
             </div>
         </li>
