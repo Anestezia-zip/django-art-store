@@ -19,8 +19,8 @@
         "pk": 3,
         "model": "products.category",
         "fields": {
-            "name": "nature",
-            "friendly_name": "Nature"
+            "name": "wildlife",
+            "friendly_name": "Wildlife"
         }
     },
     {
@@ -43,8 +43,8 @@
         "pk": 6,
         "model": "products.category",
         "fields": {
-            "name": "travelling",
-            "friendly_name": "Travelling"
+            "name": "portrait",
+            "friendly_name": "Portrait"
         }
     },
     {
@@ -69,14 +69,6 @@
         "fields": {
             "name": "subway",
             "friendly_name": "Subway"
-        }
-    },
-    {
-        "pk": 10,
-        "model": "products.category",
-        "fields": {
-            "name": "portrait",
-            "friendly_name": "Portrait"
         }
     }
 ]

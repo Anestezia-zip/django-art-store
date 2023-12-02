@@ -1,3 +1,7 @@
+.mt-20 {
+  margin-top: 20px;
+}
+
 html {
   height: 100%;
 }
@@ -12,6 +16,11 @@ body {
 
 .navi {
   background-color: rgba(0, 0, 0, 0.4196078431);
+}
+
+.msg-box {
+  width: 30%;
+  text-align: center;
 }
 
 /* from Bulma */
@@ -118,13 +127,7 @@ body {
   .hero-title {
     margin-top: 200px;
   }
-}
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
   .header-container {
-    padding-top: 116px;
-  }
-  body {
-    height: calc(100vh - 116px);
+    padding-top: 70px;
   }
 }/*# sourceMappingURL=style.css.map */
