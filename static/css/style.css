@@ -34,11 +34,6 @@ body {
   background-color: rgba(0, 0, 0, 0.4196078431);
 }
 
-.msg-box {
-  width: 30%;
-  text-align: center;
-}
-
 /* from Bulma */
 .icon {
   align-items: center;
