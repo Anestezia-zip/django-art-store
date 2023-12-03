@@ -5,10 +5,21 @@
     margin-top: 20px;
 }
 
+.mb-20 {
+    margin-bottom: 20px;
+}
+
 .l-spacing-4 {
     letter-spacing: 4px;
     text-transform: uppercase;
 
+}
+
+.pic-shadow {
+    position: relative;
+    max-width: 300px;
+    display: block;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 html {
@@ -41,6 +52,12 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.fa-xmark {
+    font-size: 22px;
+    margin-left: 18px;
+    cursor: pointer;
 }
 
 .logo-font {
@@ -132,6 +149,7 @@ body {
 .btt-link {
     cursor: pointer;
 }
+
 
 /* -------------------------------- Media Queries */
 
