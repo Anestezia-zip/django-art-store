@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static sass_tags %}
 
+{% block extra_nav_class %}
+    nav-gradient
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -39,7 +43,7 @@
                             <div class="card h-100 border-0">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }} Painting">
+                                    <img class="card-img-top img-fluid pic-frame" src="{{ product.image.url }}" alt="{{ product.name }} Painting">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'product_detail' product.id %}">

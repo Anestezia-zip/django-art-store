@@ -1,3 +1,7 @@
+*:hover {
+  transition: all 0.3s ease-in-out;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -6,15 +10,25 @@
   margin-bottom: 20px;
 }
 
+.l-spacing-2 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 .l-spacing-4 {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
 
 .pic-shadow {
-  position: relative;
-  max-width: 300px;
-  display: block;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.pic-frame {
+  transition: all 0.3s ease-in-out;
+}
+
+.pic-frame:hover {
+  transform: scale(1.02);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -28,6 +42,11 @@ body {
   height: calc(100vh - 164px);
   color: #555;
   font-family: "Lato";
+}
+
+.nav-gradient {
+  background: linear-gradient(to right, rgb(255, 186, 133), #87ceeb);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.316);
 }
 
 .navi {
@@ -165,7 +184,7 @@ body {
     z-index: 1030;
   }
   .header-container {
-    padding-top: 164px;
+    padding-top: 124px;
   }
 }
 @media (max-width: 992px) {

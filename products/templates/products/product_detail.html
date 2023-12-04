@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static sass_tags %}
 
+{% block extra_nav_class %}
+    nav-gradient
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -18,7 +22,7 @@
                 <div class="image-container">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid pic-shadow" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="">
