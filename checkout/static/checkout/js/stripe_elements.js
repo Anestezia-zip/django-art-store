@@ -6,9 +6,9 @@
     https://stripe.com/docs/stripe-js
 */
 
-const stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
-const client_secret = $('#id_client_secret').text().slice(1, -1);
-const stripe = Stripe(stripe_public_key);
+const stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+const clientSecret = $('#id_client_secret').text().slice(1, -1);
+const stripe = Stripe(stripePublicKey);
 const elements = stripe.elements();
 const style = {
     base: {
@@ -62,7 +62,7 @@ form.addEventListener('submit', function(ev) {
             const errorDiv = document.getElementById('card-errors');
             const html = `
                 <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
+                    <i class="fas fa-times"></i>
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
