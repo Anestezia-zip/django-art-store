@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-l40ae0^w^#()@1rv-xz(53qhrqaf(m#vf($zi--8tze#&gjd+p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-anestezia-zip-django-art-tr7jt4ebch.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-anestezia-zip-django-art-tr7jt4ebch.us2.codeanyapp.com']
