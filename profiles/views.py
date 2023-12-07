@@ -6,11 +6,11 @@ def profile(request):
     """ Display the user's profile """
     template = 'profiles/profile.html'
     profile = get_object_or_404(UserProfile, user=request.user)
-    # form = UserProfileForm(instance=profile)
-    # orders = profile.orders.all()
+    form = UserProfileForm(instance=profile)
+    orders = profile.orders.all()
     context = {
-        # 'form': form,
-        # 'orders': orders,
+        'form': form,
+        'orders': orders,
     }
 
     return render(request, template, context)
