@@ -34,7 +34,7 @@ class Order(models.Model):
         """
         Generate a random, unique order number using UUID
         """
-        return uuid.uuid4().hex.upper()
+        return str(uuid.uuid4().int)[:6]
 
     def update_total(self):
         """
