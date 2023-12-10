@@ -2,123 +2,128 @@
 {% load static sass_tags %}
 
 {% block extra_nav_class %}
-    nav-gradient
+nav-gradient
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font my-3">Paintings</h2>
-                {% for c in current_categories %}
-                    <span class="p-2 px-4 l-spacing-4 badge badge-white text-black">{{ c.friendly_name }}</span>
-                {% endfor %}
-                <hr class="w-50 mb-1">
-            </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font my-3">Paintings</h2>
+            {% for c in current_categories %}
+            <span class="p-2 px-4 l-spacing-4 badge badge-white text-black">{{ c.friendly_name }}</span>
+            {% endfor %}
+            <hr class="w-50 mb-1">
         </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2">
-                    <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
-                            {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
-                            {% endif %}
-                            {{ products|length }} paintings{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                        </p>
-                    </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center text-md-left">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                        {% endif %}
+                        {{ products|length }} paintings{% if search_term %} found for <strong>"{{ search_term
+                            }}"</strong>{% endif %}
+                    </p>
                 </div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid pic-frame" src="{{ product.image.url }}" alt="{{ product.name }} Painting">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }} Painting">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
-                                            <p class="small mt-1 mb-0">
-                                                {{ product.date_created|date:"d.m.Y" }}
-                                            </p>
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                        </div>
-                                    </div>
+            </div>
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid pic-frame" src="{{ product.image.url }}"
+                                alt="{{ product.name }} Painting">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
+                                alt="{{ product.name }} Painting">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                    <p class="small mt-1 mb-0">
+                                        {{ product.date_created|date:"d.m.Y" }}
+                                    </p>
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                    </div>
                 </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
-    <div class="btt-button shadow-sm border border-black">
-        <a class="btt-link d-flex h-100">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>	
-    </div>
+</div>
+<div class="btt-button shadow-sm border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
 
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-        <script type="text/javascript">
-            $('.btt-link').click(function(e) {
-                e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-            })
-        </script>
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    })
+</script>
 {% endblock %}
