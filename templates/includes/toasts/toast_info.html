@@ -11,3 +11,16 @@
         {{ message }}        
     </div>
 </div>
+
+{% block postloadjs %}
+{{ block.super }}
+    <script>
+        function showToast(message) {
+        toast = document.querySelector('toast');
+
+        setTimeout(function() {
+            toast.remove();
+        }, 2000);
+        }
+    </script>
+{% endblock %}

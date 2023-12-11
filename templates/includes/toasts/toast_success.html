@@ -11,3 +11,12 @@
         {{ message }}        
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        const toastElement = $('.custom-toast');
+        setTimeout(function() {
+            toastElement.fadeOut();
+        }, 3000);
+    });
+</script>
