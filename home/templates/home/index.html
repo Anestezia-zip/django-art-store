@@ -24,6 +24,11 @@
 
 
     <!-- Section with painting request form -->
+    <div class="container">
+        <h2 class="paint-form-title">We would love to bring your envisioned artwork to life!</h2> 
+        <h3 class="paint-form-text">Fill out the form to discuss the details of the painting you have in mind, 
+            and we will get back to you in a way that is convenient for you.</h3>
+    </div>
     <section class="container-fluid paint-request">
         <div class="container paint-request-inner">
             <div class="square-1 pic-shadow">
@@ -43,7 +48,7 @@
                                 <form method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     {{ form | crispy }}
-                                    <button type="submit" class="submit-btn mt-20">Submit</button>
+                                    <button type="submit" class="submit-btn">Submit</button>
                                 </form>
                             </div>
                         </div>
