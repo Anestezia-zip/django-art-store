@@ -1,14 +1,19 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 from checkout.models import Order
+from home.models import PaintingRequest
 from .models import UserProfile
 from .forms import UserProfileForm
 
+
+@login_required
 def profile(request):
     """ Display the user's profile """
     template = 'profiles/profile.html'
+    user_email = request.user.email
     profile = get_object_or_404(UserProfile, user=request.user)
+    painting_requests = PaintingRequest.objects.filter(email=user_email)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -24,12 +29,15 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True,
+        'user_email': user_email,
+        'painting_requests': painting_requests
     }
 
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 

@@ -137,6 +137,18 @@
     {% block postloadjs %}
         <script type="text/javascript">
             $('.toast').toast('show');
+            
+            let lastScrollTop = 0;
+
+            $(window).scroll(function() {
+            let currentScroll = $(this).scrollTop();
+            if (currentScroll > lastScrollTop) {
+                $('header').css('top', '-140px'); // Hiding the header
+            } else {
+                $('header').css('top', '0'); // Showing the header
+            }
+            lastScrollTop = currentScroll;
+            });
         </script>
     {% endblock %}
 </body>

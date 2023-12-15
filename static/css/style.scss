@@ -1,6 +1,21 @@
+$submit-color: #27563A;
 
 *:hover {
     transition: all .3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato';
 }
 
 .mt {
@@ -13,9 +28,14 @@
     }
 }
 
-
 .mb-20 {
     margin-bottom: 20px;
+}
+
+.p {
+    &-10 {
+        padding: 10px;
+    }
 }
 
 .l-spacing {
@@ -29,7 +49,6 @@
         text-transform: uppercase;
     }
 }
-    
 
 .pic-shadow {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
@@ -44,12 +63,16 @@
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-html {
-    height: 100%;
-}
-
-body {
-    font-family: 'Lato';
+.submit-btn {
+    width: 100%;
+    background-color: $submit-color;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    letter-spacing: 2px;
 }
 
 // -------------------------------------- Hero section --------------------------------------
@@ -65,7 +88,192 @@ body {
     color: #555;
 }
 
+.paint-request {
+    background-image: url('../../media/pr-bg.png');
+    padding: 50px;
+    overflow: hidden;
+
+    &-inner {
+        height: 658px;
+        // background-image: url('../../media/form-frame.png');
+        border-radius: 10px;
+        padding: 20px;
+
+        &-right {
+            padding: 20px;
+            padding-top: 30px;
+            padding-right: 40px;
+        }
+    }
+
+    &-title {
+        font-family: 'Roboto';
+        margin-bottom: 20px;
+    }
+
+    .clearablefileinput {
+        max-width: 230px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+    }
+
+    .clearablefileinput::file-selector-button {
+        font-weight: bold;
+        background-color: #fff;
+        padding: 2px 12px;
+        margin-right: 10px;
+        border: thin solid grey;
+        border-radius: 3px;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #e6f1ed;
+            transition: .3s ease-in-out;
+        }
+    }
+}
+
+.paint2-request {
+    background-image: url('../../media/pr3-bg.png');
+    overflow: hidden;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 99.5%;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label[for="id_add_signature"] {
+    cursor: pointer;
+}
+
+.square-1 {
+    position: relative;
+    border: 14px solid #e0dfdf;
+    box-shadow:
+        4px 0px 0px 0px #d6d5d5,
+        /* Right */
+        0px -4px 0px 0px #f0f0f0,
+        /* Top */
+        -4px 0px 0px 0px #dcdcdc,
+        /* Left */
+        0px 4px 0px 0px #b9b9b9;
+    /* Bottom */
+}
+
+.square-1::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: -16.9px;
+    left: -17.8px;
+    border-top: 2px solid #f0f0f0;
+    border-left: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+    border-right: 2px solid #f0f0f0;
+}
+
+.square-1::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: -16.9px;
+    right: -17.8px;
+    border-top: 2px solid #f0f0f0;
+    border-left: 2px solid #f0f0f0;
+    border-bottom: 2px solid #d6d5d5;
+    border-right: 2px solid #d6d5d5;
+}
+
+.square-2 {
+    padding: 5px;
+    padding-bottom: 0;
+    border: 14px solid #f0f0f0;
+    box-shadow:
+        0px -4px 0px 0px #c0c0c0,
+        -4px 0px 0px 0px #d8d8d8,
+        4px 0px 0px 0px #dfdfdf,
+        0px 4px 0px 0px #f4f4f4,
+        inset 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.square-2::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: -17.8px;
+    left: -17.8px;
+    border-top: 2px solid #dcdcdc;
+    border-left: 2px solid #dcdcdc;
+    border-bottom: 2px solid #b9b9b9;
+    border-right: 2px solid #b9b9b9;
+}
+
+.square-2::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    bottom: -17.8px;
+    right: -17.8px;
+    border-top: 2px solid #d6d5d5;
+    /* Top diagonal */
+    border-left: 2px solid #b9b9b9;
+    /* Left diagonal */
+    border-bottom: 2px solid #b9b9b9;
+    /* Bottom diagonal */
+    border-right: 2px solid #d6d5d5;
+    /* Right diagonal */
+}
+
+.square-3::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: -4px;
+    left: -4px;
+    border-top: 2px solid #c0c0c0;
+    border-left: 2px solid #d8d8d8;
+    border-bottom: 2px solid #d8d8d8;
+    border-right: 2px solid #c0c0c0;
+}
+
+
+
+
 // -------------------------------------- Main Navigation --------------------------------------
+
+header {
+    transition: top 0.5s;
+}
+
+#sort-all {
+    position: relative;
+    width: 10%;
+    left: 7.5%;
+    top: 80px;
+    z-index: 1;
+}
 
 .nav-gradient {
     background: linear-gradient(to right, rgb(255, 186, 133), #87ceeb);
@@ -144,7 +352,7 @@ body {
 
     &-button {
         padding: 4px 10px;
-        background-color:#27563A;
+        background-color: $submit-color;
         border: 1px solid #193625;
         color: #fff;
         border-bottom-right-radius: 12px;
@@ -152,7 +360,7 @@ body {
     }
 
     .fa-search {
-        background-color: #27563A;
+        background-color: $submit-color;
     }
 }
 
@@ -198,13 +406,44 @@ body {
     height: 2px;
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+
+    input[type="file"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+.custom-checkbox {
+    .custom-control-label::before {
+        border-radius: 0;
+        border-color: #dc3545;
+    }
+
+    .custom-control-input:checked~.custom-control-label::before {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        border-radius: 0;
+    }
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */

@@ -16,6 +16,18 @@ nav-gradient
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
+    {% if not request.GET.category %}
+        <a class="logo-font font-weight-bold nav-link mr-5 text-black l-spacing-2" href="#" id="sort-all" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort by
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Price (low to high)</a>
+            <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">Price (high to low)</a>
+            <a href="{% url 'products' %}?sort=date&direction=desc" class="dropdown-item ">Date</a>
+            <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">Category</a>
+            <a href="{% url 'products' %}" class="dropdown-item">All Paintings</a>
+        </div>
+    {% endif %}
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font my-3">Paintings</h2>

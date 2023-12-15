@@ -1,92 +1,90 @@
+// Object containing DOM elements
+const elements = {
+  track: document.getElementById("image-track"),
+  images: document.querySelectorAll('.image'),
+  fullscreenView: document.getElementById('fullscreen-view'),
+  fullscreenImage: document.getElementById('fullscreen-image'),
+  closeBtn: document.querySelector('.close-btn'),
+  arrowLeft: document.querySelector('.arrow-left'),
+  arrowRight: document.querySelector('.arrow-right')
+};
 
-const track = document.getElementById("image-track");
-const images = document.querySelectorAll('.image');
-const fullscreenView = document.getElementById('fullscreen-view');
-const fullscreenImage = document.getElementById('fullscreen-image');
-const closeBtn = document.querySelector('.close-btn');
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
+// Index of the current image
 let currentIndex = 0;
 
-// Функция открытия изображения на полный экран
+// Function to open fullscreen mode with a specified image source
 function openFullscreen(imageSrc) {
-  fullscreenImage.src = imageSrc;
-  fullscreenView.classList.add('show');
+  elements.fullscreenImage.src = imageSrc;
+  elements.fullscreenView.classList.add('show');
 }
 
-// Функция закрытия полноэкранного режима
+// Function to close fullscreen mode
 function closeFullscreen() {
-  fullscreenView.classList.remove('show');
+  elements.fullscreenView.classList.remove('show');
 }
 
-fullscreenView.addEventListener('click', (event) => {
-  // Проверяем, что клик произошел на затемненном фоне, а не на изображении или кнопках
-  if (event.target === fullscreenView) {
-    closeFullscreen();
-  }
-});
-
-// Переключение на предыдущее изображение
+// Function to display the previous image
 function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  openFullscreen(images[currentIndex].src);
+  currentIndex = (currentIndex - 1 + elements.images.length) % elements.images.length;
+  openFullscreen(elements.images[currentIndex].src);
 }
 
-// Переключение на следующее изображение
+// Function to display the next image
 function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  openFullscreen(images[currentIndex].src);
+  currentIndex = (currentIndex + 1) % elements.images.length;
+  openFullscreen(elements.images[currentIndex].src);
 }
 
-// Обработчики событий для изображений
-images.forEach((image, index) => {
+// Function to handle click on an image
+function handleImageClick(image, index) {
   image.addEventListener('click', () => {
     currentIndex = index;
     openFullscreen(image.src);
   });
-});
+}
 
-// Обработчики событий для стрелок
-arrowLeft.addEventListener('click', prevImage);
-arrowRight.addEventListener('click', nextImage);
+// Adding click event listeners to images
+elements.images.forEach(handleImageClick);
 
-// Обработчик события для закрытия полноэкранного режима
-closeBtn.addEventListener('click', closeFullscreen);
+// Adding click event listeners to navigation arrows
+elements.arrowLeft.addEventListener('click', prevImage);
+elements.arrowRight.addEventListener('click', nextImage);
+elements.closeBtn.addEventListener('click', closeFullscreen);
 
-// Закрыть полноэкранный режим при нажатии на Esc
+// Listening for the 'Escape' key to close fullscreen mode
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeFullscreen();
   }
 });
 
-// Оставить ваш текущий код для отслеживания событий мыши и тачскрина
+// To track mouse and touchscreen events)
 const handleOnDown = e => {
-  track.dataset.mouseDownAt = e.clientX;
+  elements.track.dataset.mouseDownAt = e.clientX;
 };
 
 const handleOnUp = () => {
-  track.dataset.mouseDownAt = "-30";
-  track.dataset.prevPercentage = track.dataset.percentage;
+  elements.track.dataset.mouseDownAt = "-30";
+  elements.track.dataset.prevPercentage = elements.track.dataset.percentage;
 };
 
 const handleOnMove = e => {
-  if (track.dataset.mouseDownAt === "-30") return;
+  if (elements.track.dataset.mouseDownAt === "-30") return;
 
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+  const mouseDelta = parseFloat(elements.track.dataset.mouseDownAt) - e.clientX,
     maxDelta = window.innerWidth / 2;
 
   const percentage = (mouseDelta / maxDelta) * -100,
-    nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+    nextPercentageUnconstrained = parseFloat(elements.track.dataset.prevPercentage) + percentage,
     nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, -30), -70);
 
-  track.dataset.percentage = nextPercentage;
+  elements.track.dataset.percentage = nextPercentage;
 
-  track.animate({
+  elements.track.animate({
     transform: `translate(${nextPercentage}%, -50%)`
   }, { duration: 1200, fill: "forwards" });
 
-  for (const image of track.getElementsByClassName("image")) {
+  for (const image of elements.track.getElementsByClassName("image")) {
     image.animate({
       objectPosition: `${100 + nextPercentage}% center`
     }, { duration: 1200, fill: "forwards" });
@@ -113,11 +111,9 @@ if (isTouchDevice) {
 }
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
-// Добавление обработчика клика на затемненный фон
-fullscreenView.addEventListener('click', (event) => {
-  // Проверяем, что клик произошел на затемненном фоне, а не на изображении или кнопках
-  if (event.target === fullscreenView) {
+// Adding a click handler to close fullscreen mode when clicking on the darkened background
+elements.fullscreenView.addEventListener('click', (event) => {
+  if (event.target === elements.fullscreenView) {
     closeFullscreen();
   }
 });
-

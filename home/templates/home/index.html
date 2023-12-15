@@ -7,7 +7,7 @@
 
 
 {% block content %}
-    <div class="container-fluid hero-img">
+    <section class="container-fluid hero-img">
         <div class="row h-100">
             <div class="col-7 col-md-6 my-auto mx-5">
                 <h1 class="hero-title display-4 logo-font text-black">
@@ -20,20 +20,65 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
     <!-- Section with painting request form -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <h2>Request to create a painting</h2>
-                <form method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <section class="container-fluid paint-request">
+        <div class="container paint-request-inner">
+            <div class="square-1 pic-shadow">
+                <div class="square-2">
+                    <div class="square-3">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="video-wrapper">
+                                    <video id="myVideo" controls autoplay muted>
+                                    <source src="{{MEDIA_URL}}sunset-sea.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 paint-request-inner-right">
+                                <h2 class="paint-request-title">Request to create a painting</h2>
+                                <form method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {{ form | crispy }}
+                                    <button type="submit" class="submit-btn mt-20">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>     
+    </section>
+
+    <section class="paint2-request">
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+        <p>fdgdf</p>
+    </section>
+
+
     
+    
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    <script type="text/javascript">
+        const video = document.getElementById("myVideo");
+        video.onmouseover = function() {
+            video.play();
+        };
+        video.onmouseout = function() {
+            video.pause();
+        };
+    </script>
 {% endblock %}
