@@ -1,0 +1,1 @@
+web: gunicorn art_store.wsgi:application

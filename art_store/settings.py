@@ -29,11 +29,7 @@ SECRET_KEY = 'django-insecure-l40ae0^w^#()@1rv-xz(53qhrqaf(m#vf($zi--8tze#&gjd+p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-anestezia-zip-django-art-tr7jt4ebch.us2.codeanyapp.com']
-
+ALLOWED_HOSTS = ['artful-urbex-3e13a9b6e83c.herokuapp.com']
 
 # Application definition
 
@@ -158,9 +154,17 @@ WSGI_APPLICATION = 'art_store.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
