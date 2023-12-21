@@ -12,9 +12,17 @@ body {
     font-family: 'Lato';
 }
 
+textarea {
+    resize: none;
+}
+
 .mt {
     &-20 {
         margin-top: 20px;
+    }
+
+    &-40 {
+        margin-top: 40px;
     }
 
     &-130 {
@@ -24,6 +32,20 @@ body {
 
 .mb-20 {
     margin-bottom: 20px;
+}
+
+.ml {
+    &-20 {
+        margin-left: 20px;
+    }
+
+    &-40 {
+        margin-left: 40px;
+    }
+}
+
+.mr-40 {
+    margin-right: 40px;
 }
 
 .p {
@@ -462,6 +484,39 @@ header {
     }
 }
 
+// -------------------------------------- Profile --------------------------------------
+
+.painting-request-card {
+    margin-left: 30px;
+}
+
+.delete-btn,
+.edit-btn {
+    display: inline-block;
+    width: 49%;
+    background-color: #d0f6ff;
+    color: #000;
+    border-radius: 6px;
+    text-align: center;
+    padding: 4px 0;
+    text-transform: uppercase;
+    margin-top: 8px;
+    font-weight: bold;
+    
+    &:hover {
+        background-color: #a8c8cf;
+        transform: scale(1.01);
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.delete-btn {
+
+    &:hover {
+        background-color: #ffb0b0;
+    }
+}
 
 /* -------------------------------- Media Queries */
 

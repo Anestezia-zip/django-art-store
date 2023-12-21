@@ -16,7 +16,6 @@ def index(request):
     return render(request, 'home/index.html', context)
 
 
-
 def create_painting_request(request):
     initial_email = request.user.email if request.user.is_authenticated else ''
 
@@ -27,7 +26,10 @@ def create_painting_request(request):
             painting_request.email = initial_email
             painting_request.save()
             messages.success(request, 'Successfully sent request!')
-            return redirect('home')
+            if request.user.is_authenticated:
+                return redirect('profile')
+            else:
+                return redirect('home')
         else:
             messages.error(request, 'Failed to send a request. Please ensure the form is valid.')
     else:
