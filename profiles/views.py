@@ -71,6 +71,7 @@ def edit_painting(request, painting_id):
     return render(request, 'profiles/edit_painting.html', context)
 
 
+@login_required
 def delete_painting(request, painting_id):
     """ Delete a request from the store """
     painting = get_object_or_404(PaintingRequest, pk=painting_id)

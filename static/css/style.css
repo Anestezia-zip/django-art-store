@@ -14,6 +14,10 @@ textarea {
   resize: none;
 }
 
+input[type=checkbox] {
+  cursor: pointer;
+}
+
 .mt-20 {
   margin-top: 20px;
 }
@@ -407,10 +411,23 @@ header {
   height: 2px;
 }
 
-/* Product Form */
+/* Profile Form */
 .btn-file {
+  width: 25%;
   position: relative;
   overflow: hidden;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 4px 12px;
+  margin-top: 6px;
+  border: thin solid grey;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn-file:hover {
+  background-color: #e6f1ed;
+  transition: 0.3s ease-in-out;
 }
 .btn-file input[type=file] {
   position: absolute;
@@ -422,6 +439,9 @@ header {
   cursor: pointer;
 }
 
+.custom-checkbox {
+  float: right !important;
+}
 .custom-checkbox .custom-control-label::before {
   border-radius: 0;
   border-color: #dc3545;
@@ -430,6 +450,10 @@ header {
   background-color: #dc3545;
   border-color: #dc3545;
   border-radius: 0;
+}
+
+.custom-control-label {
+  cursor: pointer;
 }
 
 .painting-request-card {
