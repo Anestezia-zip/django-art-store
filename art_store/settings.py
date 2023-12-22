@@ -232,6 +232,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STANDARD_DELIVERY_PERCENTAGE = 5
 
+SECRET_KEY = os.environ.get('SECRET_KEY')
 # https://dashboard.stripe.com/
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
