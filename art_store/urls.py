@@ -32,4 +32,4 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-handler404 = 'art-store.views.handler404'
+handler404 = 'art_store.views.handler404'
