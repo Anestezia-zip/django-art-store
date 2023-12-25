@@ -2,88 +2,226 @@
 {% load static %}
 
 {% block extra_nav_class %}
-    navi
+navi
 {% endblock %}
 
 
 {% block content %}
-    <section class="container-fluid hero-img">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto mx-5">
-                <h1 class="hero-title display-4 logo-font text-black">
-                    The new paintings are here
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">View all</a>
-                    </h4>
-                </div>
+<section class="container-fluid hero-img">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto mx-5">
+            <h1 class="hero-title display-4 logo-font text-black">
+                The new paintings are here
+            </h1>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">View
+                        all</a>
+                </h4>
             </div>
         </div>
-    </section>
-
-
-    <!-- Section with painting request form -->
-    <div class="container">
-        <h2 class="paint-form-title">We would love to bring your envisioned artwork to life!</h2> 
-        <h3 class="paint-form-text">Fill out the form to discuss the details of the painting you have in mind, 
-            and we will get back to you in a way that is convenient for you.</h3>
     </div>
-    <section class="container-fluid paint-request">
-        <div class="container paint-request-inner">
+</section>
+
+
+<!------------------- Section with painting request form ------------------->
+<section class="container-fluid painting-request">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="video-top">
+                <p>We would love to bring your envisioned artwork to life</p>
+                <div class="video-wrapper">
+                    <video class="myVideo" controls muted>
+                        <source src="{{MEDIA_URL}}sunset-sea.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="video-bottom">
+                <div class="video-wrapper">
+                    <video class="myVideo" controls muted>
+                        <source src="{{MEDIA_URL}}forest.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>Fill out the form to discuss the details of the painting you have in mind,
+                    and we will get back to you in a way that is convenient for you
+                    <i class="fa-regular fa-paper-plane"></i>
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-6 paint-request-inner-right">
             <div class="square-1 pic-shadow">
                 <div class="square-2">
                     <div class="square-3">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="video-wrapper">
-                                    <video id="myVideo" controls muted>
-                                    <source src="{{MEDIA_URL}}sunset-sea.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 paint-request-inner-right">
-                                <h2 class="paint-request-title">Request to create a painting</h2>
-                                <form method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
-                                    {% csrf_token %}
-                                    {{ form | crispy }}
-                                    <button type="submit" class="submit-btn">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                        <h2 class="paint-request-title">Request to create a painting</h2>
+                        <form method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
                     </div>
                 </div>
-            </div>     
-    </section>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section class="paint2-request">
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-        <p>fdgdf</p>
-    </section>
+<section class="container-fluid about-bg">
+    <div class="about-container">
+        <h2 class="text-center">Let our art find a home within your walls</h2>
+        <div class="row about-text">
+            <p>Here, canvases transcend their frames, colors speak volumes, and every stroke narrates a story.</p>
+            <p class="m-center">Our collection embodies the fusion of</p>
+            <ul class="about-list">
+                <li>diversity </li>
+                <li>expression</li>
+                <li>versatility</li>
+                <li>eccentricity</li>
+            </ul>
+            <p>And your own experience will be our inspiration.</p>
+            <p>From the laughter-filled gardens to the serene lakeshores, your fondest memories can be
+                brought to life on canvas, becoming tangible expressions of your experiences.</p>
+        </div>
+        <h3>We're here to immortalize the nostalgia you hold dear in artistry:</h3>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">First Love Sunset</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-first-love-sunset.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">A canvas painted with youthful affection.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Mulberry Garden</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-mulberry-garden.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">Where childhood secrets were shared, and the day lasted
+                            so long.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">Enchanted Forest</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-enchanted-forest.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">Unforgettable adventures etched into your memory—where
+                            childhood escapades unfolded.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">Lake of Adventure</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-lake-of-adventure.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">An exhilarating blend of adrenaline and leisure that
+                            encapsulates youthful freedom.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">Cornflowers and Dandelions</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-cornflowers.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">A journey through carefree
+                            afternoons.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Old Oak Tree Swing</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-tree-swing.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">Memories of laughter echoing under the shade of the beloved old oak tree swing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Starlit Nightscape</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-nightscape.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">A canvas painted with dreams, fostering a sense of
+                            infinite possibilities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Bonfire Campfire Tales</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-firetales.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">A canvas ablaze with warmth and camaraderie.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Mountain Summit Sunrise</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-mountain-sunrise.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">A canvas painted with the hues of a promising
+                            day.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Sunflower Field Dance</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-sunflower.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">Golden petals swaying to a symphony of memories under the radiant sun.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Summer Night Fireflies</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-fireflies.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">Dancing lights painting the warm summer nights with magic and wonder.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="about-card">
+                    <h5 class="about-card-title">The Majestic Snow-Capped Mountains</h5>
+                    <div class="card-body">
+                        <img src="{{MEDIA_URL}}about-mountains-moon.jpg" class="card-img-top" alt="Painting Example">
+                        <p class="card-text">A breathtaking vista of mountains cloaked in snow, standing tall under the azure sky.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-    
-    
+
+
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
-    <script type="text/javascript">
-        const video = document.getElementById("myVideo");
-        video.onmouseover = function() {
+<script type="text/javascript">
+    const videos = document.querySelectorAll(".myVideo");
+
+    videos.forEach(video => {
+        video.addEventListener("mouseover", function () {
             video.play();
-        };
-        video.onmouseout = function() {
+        });
+
+        video.addEventListener("mouseout", function () {
             video.pause();
-        };
-    </script>
+        });
+    });
+</script>
+
 {% endblock %}
