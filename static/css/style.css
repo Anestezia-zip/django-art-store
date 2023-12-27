@@ -89,7 +89,8 @@ input[type=checkbox] {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-.submit-btn {
+.submit-btn,
+.logout-btn {
   width: 100%;
   background-color: #27563A;
   color: #fff;
@@ -99,6 +100,10 @@ input[type=checkbox] {
   border-radius: 6px;
   border: none;
   letter-spacing: 2px;
+}
+
+.logout-btn {
+  width: 250px;
 }
 
 .hero-title {
