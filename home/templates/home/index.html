@@ -54,7 +54,7 @@ navi
             <div class="square-1 pic-shadow">
                 <div class="square-2">
                     <div class="square-3">
-                        <h2 class="paint-request-title">Request to create a painting</h2>
+                        <h2 class="paint-request-title">Let's discuss your ideas for a future painting</h2>
                         <form method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form | crispy }}

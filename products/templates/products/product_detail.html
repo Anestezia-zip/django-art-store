@@ -2,69 +2,144 @@
 {% load static sass_tags %}
 
 {% block extra_nav_class %}
-    nav-gradient
+nav-gradient
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-20">
-                <p class="mb-0">{{ product.name }}</p>
-                <div class="image-container">
-                    {% if product.image %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid pic-shadow" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
-                </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-20">
+            <div class="image-container">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid pic-shadow" src="{{ product.image.url }}"
+                        alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
+                </a>
+                {% endif %}
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                    {% if product.category %}
-                        <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+                <h2 class="mb-0">{{ product.name }}</h2>
+                {% if product.category %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
+                <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                {% if product.rating %}
+                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                {% else %}
+                <small class="text-muted">No Rating</small>
+                {% endif %}
+                <p class="mt-3">{{ product.description }}</p>
+                <!-- Star rating -->
+                <form class="rate-form" method="POST" data-product-id="{{ product.id }}">
+                    {% csrf_token %}
+                    <button type="button" class="fa fa-star" value="1" id="1"></button>
+                    <button type="button" class="fa fa-star" value="2" id="2"></button>
+                    <button type="button" class="fa fa-star" value="3" id="3"></button>
+                    <button type="button" class="fa fa-star" value="4" id="4"></button>
+                    <button type="button" class="fa fa-star" value="5" id="5"></button>
+                </form>
+                <div id="rating-confirm-box"></div>
+                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                        </p>
-                    {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
-                    
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row">
-                            <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
-                    </form>
-                </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $(document).ready(function () {
+        const form = document.querySelector('.rate-form')
+        const first = document.getElementById('1')
+        const second = document.getElementById('2')
+        const third = document.getElementById('3')
+        const fourth = document.getElementById('4')
+        const fifth = document.getElementById('5')
+        const confirmBox = document.getElementById('rating-confirm-box')
+        const csrf = document.getElementsByName('csrfmiddlewaretoken')
+
+        const handleStarSelection = (amount) => {
+            const children = form.children;
+            for (const child of children) {
+                if (parseInt(child.value) <= amount) {
+                    child.classList.add('checked');
+                } else {
+                    child.classList.remove('checked');
+                }
+            }
+        };
+
+        const handleSelect = (selection) => {
+            handleStarSelection(parseInt(selection));
+        };
+
+        if (form) {
+            const ratingButtons = form.children;
+            for (const button of ratingButtons) {
+                button.addEventListener('mouseover', (e) => {
+                    handleSelect(e.target.value);
+                });
+
+                button.addEventListener('click', (e) => {
+                    const value = e.target.value;
+                    const productId = form.getAttribute('data-product-id');
+                    console.log(value);
+                    console.log(productId);
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/rate_product/',
+                        data: {
+                            'csrfmiddlewaretoken': csrf[0].value,
+                            'value': value,
+                        },
+                        success: function (response) {
+                            console.log(response);
+                            confirmBox.innerHTML = `<h2>Successfully rated with ${response.score}</h2>`;
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(xhr.responseText);
+                            confirmBox.innerHTML = `<h2>Oops... Something went wrong</h2>`;
+                        }
+                    });
+                });
+            }
+        }
+    });
+</script>
+
 {% endblock %}

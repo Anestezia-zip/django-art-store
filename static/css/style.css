@@ -64,6 +64,16 @@ input[type=checkbox] {
   text-transform: uppercase;
 }
 
+.checked {
+  color: orange;
+  transition: all .3s ease-in-out;
+}
+
+.rate-form button {
+  background-color: transparent;
+  border: 0;
+}
+
 /* -------------------------- Hero section -------------------------- */
 
 .pic-shadow {

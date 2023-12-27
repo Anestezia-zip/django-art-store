@@ -2,7 +2,8 @@ from django.shortcuts import get_object_or_404, redirect, reverse, render
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, ProductRating
+from django.http import JsonResponse
 
 
 def all_products(request):
@@ -60,10 +61,23 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-
+    rating = product.average_rating()
     context = {
         'product': product,
+        'rating': rating,
     }
-
     return render(request, 'products/product_detail.html', context)
 
+
+def rate_product(request, product_id=None):
+    print('Something')
+    if request.method == 'POST' and request.user.is_authenticated:
+        value = request.POST.get('value')
+        product = get_object_or_404(Product, pk=product_id)
+        user = request.user
+        rating, created = ProductRating.objects.get_or_create(product=product, user=user)
+        rating.score = value
+        rating.save()
+        return JsonResponse({'success': True, 'score': value}, safe=False)
+    print('Something here')
+    return JsonResponse({'success': False})

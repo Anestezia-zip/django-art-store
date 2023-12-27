@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, ProductRating
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('sku', 'name', 'category', 'price', 'rating', 'image',)
+    list_display = ('sku', 'name', 'category', 'price', 'image',)
     ordering = ('sku',)
 
 
@@ -13,3 +13,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(ProductRating)
