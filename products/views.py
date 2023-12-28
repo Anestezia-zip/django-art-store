@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, reverse, render
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, ProductRating
+from .models import Product, Category, ProductRating, Wishlist
 from django.http import JsonResponse
 
 
@@ -81,3 +81,12 @@ def rate_product(request, product_id=None):
         return JsonResponse({'success': True, 'score': value}, safe=False)
     print('Something here')
     return JsonResponse({'success': False})
+
+
+def toggle_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user, product=product)
+    if not created:
+        wishlist.delete()
+        return JsonResponse({'added': False})
+    return JsonResponse({'added': True})

@@ -83,9 +83,14 @@ nav-gradient
                                         </a>
                                     </p>
                                     {% endif %}
-                                    <p class="small mt-1 mb-0">
-                                        {{ product.date_created|date:"d.m.Y" }}
-                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="small mt-1 mb-0">
+                                            {{ product.date_created|date:"d.m.Y" }}
+                                        </p>
+                                        <div>
+                                            <i class="fa-solid fa-heart toggle-wishlist" data-product-id="1"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -134,5 +139,18 @@ nav-gradient
             behavior: 'smooth'
         });
     })
+
+    document.querySelectorAll('.toggle-wishlist').forEach((heart) => {
+    heart.addEventListener('click', async (e) => {
+        const productId = e.target.dataset.productId;
+        const response = await fetch(`/toggle-wishlist/${productId}/`, { method: 'POST' });
+        const data = await response.json();
+        if (data.added) {
+            e.target.classList.add('active'); // Добавить цветное заполнение сердца
+        } else {
+            e.target.classList.remove('active'); // Убрать цветное заполнение сердца
+        }
+    });
+});
 </script>
 {% endblock %}
