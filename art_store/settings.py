@@ -26,7 +26,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','artful-urbex-3e13a9b6e83c.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','artful-urbex-3e13a9b6e83c.herokuapp.com',
+'8000-anesteziazi-djangoartst-mo9mp8zlbqn.ws-eu107.gitpod.io']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-anesteziazi-djangoartst-mo9mp8zlbqn.ws-eu107.gitpod.io'
+]
 
 # Application definition
 

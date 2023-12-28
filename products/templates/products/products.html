@@ -88,7 +88,11 @@ nav-gradient
                                             {{ product.date_created|date:"d.m.Y" }}
                                         </p>
                                         <div>
-                                            <i class="fa-solid fa-heart toggle-wishlist" data-product-id="1"></i>
+                                            <i class="fa-solid fa-heart toggle-wishlist{% if product.id in wishlist_item_ids %} active{% endif %}"
+                                               data-product-id="{{ product.id }}" style="cursor: pointer;"></i>
+                                            {% if product.id in wishlist_item_ids %}
+                                                <p>{{ product.name }}</p>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -141,16 +145,24 @@ nav-gradient
     })
 
     document.querySelectorAll('.toggle-wishlist').forEach((heart) => {
-    heart.addEventListener('click', async (e) => {
-        const productId = e.target.dataset.productId;
-        const response = await fetch(`/toggle-wishlist/${productId}/`, { method: 'POST' });
-        const data = await response.json();
-        if (data.added) {
-            e.target.classList.add('active'); // Добавить цветное заполнение сердца
-        } else {
-            e.target.classList.remove('active'); // Убрать цветное заполнение сердца
-        }
+        heart.addEventListener('click', async (e) => {
+            const productId = e.target.dataset.productId;
+            const csrfToken = "{{ csrf_token }}";
+
+            const response = await fetch(`/products/toggle-wishlist/${productId}/`, { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                },
+            });
+            const data = await response.json();
+            if (data.added) {
+                e.target.classList.add('active');
+            } else {
+                e.target.classList.remove('active');
+            }
+        });
     });
-});
 </script>
 {% endblock %}

@@ -10,6 +10,7 @@ def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
+    wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
     query = None
     categories = None
     sort = None
@@ -53,6 +54,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'wishlist_item_ids': wishlist_items
     }
 
     return render(request, 'products/products.html', context)
@@ -90,3 +92,9 @@ def toggle_wishlist(request, product_id):
         wishlist.delete()
         return JsonResponse({'added': False})
     return JsonResponse({'added': True})
+
+
+def view_wishlist(request):
+    user = request.user
+    wishlist_items = Wishlist.objects.filter(user=user)
+    return render(request, 'products.html', {'wishlist_items': wishlist_items})
