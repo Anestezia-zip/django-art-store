@@ -83,6 +83,14 @@ document.querySelectorAll('.remove-from-wishlist').forEach((trashIcon) => {
                 if (card) {
                     card.remove(); // Remove the entire card
                 }
+                
+                // Check if there are any cards left
+                const remainingCards = document.querySelectorAll('.card');
+                if (remainingCards.length === 0) {
+                    // Display the message if no cards are left
+                    const wishlistContainer = document.querySelector('.wishlist-container');
+                    wishlistContainer.innerHTML = "<p>Your collection of beloved artworks<br>will be showcased here.</p>";
+                }
             } else {
                 console.error('An error occurred when removing a painting from the wishlist.');
             }

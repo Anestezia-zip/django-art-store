@@ -21,6 +21,7 @@ nav-gradient
 
 <div class="product-container col-10 offset-1 mt-40">
     <div class="row">
+        <h2 class="wishlist-container col-12 text-center my-4"></h2>
         {% if wishlist_item_ids %}
             {% for product in products %}
                 {% if product.id in wishlist_item_ids %}
