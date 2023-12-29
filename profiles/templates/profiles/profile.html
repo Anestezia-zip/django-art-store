@@ -56,35 +56,6 @@
                 </table>
             </div>
         </div>
-        {% else %}
-        <!-- <table class="table table-sm table-borderless ml-20">
-            <thead>
-                <tr>
-                    <th>Order Number</th>
-                    <th>Date</th>
-                    <th>Items</th>
-                    <th>Order Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="#">
-                            Order Number
-                        </a>
-                    </td>
-                    <td>Order Date</td>
-                    <td>
-                        <ul class="list-unstyled">
-                            <li class="small">
-                                Product name
-                            </li>
-                        </ul>
-                    </td>
-                    <td>$500</td>
-                </tr>
-            </tbody>
-        </table> -->
         {% endif %}
     </div>
 
@@ -122,6 +93,34 @@
                         <a class="edit-btn" href="{% url 'edit_painting' r.id %}">Edit</a>
                         <a class="delete-btn" href="#" data-toggle="modal" data-target="#confirmDeleteModal{{ r.id }}">Delete</a>
                     </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% if temporary_requests %}
+        {% for t in temporary_requests %}
+        <div class="col-md-6 col-lg-5 mb-3 mt-40">
+            <div class="card painting-request-card">
+                <div class="card-body">
+                    <h5>Thank you for your request, we will get back to you shortly on the email provided</h5>
+                    <hr>
+                    <p class="card-text"><b>Painting description:</b> {{ t.description }}</p>
+                    <p class="card-title"><b>Contact e-mail:</b> {{ t.email }}</p>
+                    <p class="card-text"><b>Size:</b> {{ t.size }}</p>
+                    <div>
+                        {% if r.examples %}
+                            <img width="100" src="{{ t.examples.url }}" alt="Example" class="mx-3">
+                        {% endif %}
+                        {% if r.examples2 %}
+                            <img width="100" src="{{ t.examples2.url }}" alt="Example2">
+                        {% endif %}
+                    </div>
+                    <!-- <div class="mt-3">
+                        <a class="edit-btn" href="{% url 'edit_painting' t.id %}">Edit</a>
+                        <a class="delete-btn" href="#" data-toggle="modal" data-target="#confirmDeleteModal{{ t.id }}">Delete</a>
+                    </div> -->
                 </div>
             </div>
         </div>

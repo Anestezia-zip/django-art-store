@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from checkout.models import Order
-from home.models import PaintingRequest
+from home.models import PaintingRequest, TemporaryPaintingRequest
 from .models import UserProfile
 from .forms import PaintingEditForm, UserProfileForm
 
@@ -13,7 +13,8 @@ def profile(request):
     template = 'profiles/profile.html'
     user_email = request.user.email
     profile = get_object_or_404(UserProfile, user=request.user)
-    painting_requests = PaintingRequest.objects.filter(email=user_email)
+    painting_requests = PaintingRequest.objects.filter(user=request.user)
+    temporary_requests = TemporaryPaintingRequest.objects.filter(email=user_email)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -31,7 +32,8 @@ def profile(request):
         'orders': orders,
         'on_profile_page': True,
         'user_email': user_email,
-        'painting_requests': painting_requests
+        'painting_requests': painting_requests,
+        'temporary_requests': temporary_requests
     }
 
     return render(request, template, context)
