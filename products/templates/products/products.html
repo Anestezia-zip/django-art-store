@@ -87,13 +87,9 @@ nav-gradient
                                         <p class="small mt-1 mb-0">
                                             {{ product.date_created|date:"d.m.Y" }}
                                         </p>
-                                        <div>
-                                            <i class="fa-solid fa-heart toggle-wishlist{% if product.id in wishlist_item_ids %} active{% endif %}"
-                                               data-product-id="{{ product.id }}" style="cursor: pointer;"></i>
-                                            {% if product.id in wishlist_item_ids %}
-                                                <p>{{ product.name }}</p>
-                                            {% endif %}
-                                        </div>
+                                        <i class="fa-solid fa-heart toggle-wishlist{% if product.id in wishlist_item_ids %} active{% endif %}"
+                                            data-product-id="{{ product.id }}" style="cursor: pointer;">
+                                        </i>
                                     </div>
                                 </div>
                             </div>
@@ -135,34 +131,5 @@ nav-gradient
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
-    $('.btt-link').click(function (e) {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    })
-
-    document.querySelectorAll('.toggle-wishlist').forEach((heart) => {
-        heart.addEventListener('click', async (e) => {
-            const productId = e.target.dataset.productId;
-            const csrfToken = "{{ csrf_token }}";
-
-            const response = await fetch(`/products/toggle-wishlist/${productId}/`, { 
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': csrfToken,
-                },
-            });
-            const data = await response.json();
-            if (data.added) {
-                e.target.classList.add('active');
-            } else {
-                e.target.classList.remove('active');
-            }
-        });
-    });
-</script>
+<script src="{% static 'products/js/script.js' %}"></script>
 {% endblock %}

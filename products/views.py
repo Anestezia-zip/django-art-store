@@ -87,14 +87,33 @@ def rate_product(request, product_id=None):
 
 def toggle_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    wishlist, created = Wishlist.objects.get_or_create(user=request.user, product=product)
-    if not created:
-        wishlist.delete()
+    wishlist_item = Wishlist.objects.filter(user=request.user, product=product).first()
+    
+    if wishlist_item:
+        wishlist_item.delete()
         return JsonResponse({'added': False})
-    return JsonResponse({'added': True})
+    else:
+        Wishlist.objects.create(user=request.user, product=product)
+        return JsonResponse({'added': True})
+
+
+def remove_from_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist_item = Wishlist.objects.filter(user=request.user, product=product).first()
+
+    if wishlist_item:
+        wishlist_item.delete()
+        return JsonResponse({'removed': True})
+    else:
+        return JsonResponse({'removed': False})
 
 
 def view_wishlist(request):
-    user = request.user
-    wishlist_items = Wishlist.objects.filter(user=user)
-    return render(request, 'products.html', {'wishlist_items': wishlist_items})
+    products = Product.objects.all()
+    wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
+
+    context = {
+        'products': products,
+        'wishlist_item_ids': wishlist_items
+    }
+    return render(request, 'products/wishlist.html', context)
