@@ -1,7 +1,7 @@
 from django import forms
 from profiles.widgets import CustomClearableFileInput
 from .models import UserProfile
-from home.models import PaintingRequest
+from home.models import PaintingRequest, TemporaryPaintingRequest
 
 
 class UserProfileForm(forms.ModelForm):
@@ -44,3 +44,11 @@ class PaintingEditForm(forms.ModelForm):
     examples = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
     examples2 = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
  
+
+class TemporaryPaintingEditForm(forms.ModelForm):
+    class Meta:
+        model = TemporaryPaintingRequest
+        fields = '__all__'
+
+    examples = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    examples2 = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)

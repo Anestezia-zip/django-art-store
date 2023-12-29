@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from checkout.models import Order
 from home.models import PaintingRequest, TemporaryPaintingRequest
 from .models import UserProfile
-from .forms import PaintingEditForm, UserProfileForm
+from .forms import PaintingEditForm, TemporaryPaintingEditForm, UserProfileForm
 
 
 @login_required
@@ -53,18 +53,33 @@ def order_history(request, order_number):
 
 
 @login_required
-def edit_painting(request, painting_id):
-    painting = get_object_or_404(PaintingRequest, id=painting_id)
+def edit_painting(request, painting_id, temporary=False):
+    """
+    - Allows users to edit a painting request, either temporary or permanent, based on the 'temporary' parameter.
+    - Handles both GET and POST requests:
+        - GET request: Renders the form with the data of the existing painting request.
+        - POST request: Validates the submitted form data, saves changes if valid, and redirects to the user's profile.
+        If the form is invalid, displays an error message and keeps the user on the editing page.
+        - Painting Request - needed for registered users to display in the profile
+        - Temporary Painting Request - needed for unregistered users to be able to manage requests during further registration
+    """
+    if temporary:
+        painting = get_object_or_404(TemporaryPaintingRequest, id=painting_id)
+        form_class = TemporaryPaintingEditForm
+    else:
+        painting = get_object_or_404(PaintingRequest, id=painting_id)
+        form_class = PaintingEditForm
+
     if request.method == 'POST':
-        form = PaintingEditForm(request.POST, request.FILES, instance=painting)
+        form = form_class(request.POST, request.FILES, instance=painting)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated painting request')
             return redirect('profile')
         else:
-            messages.error(request, 'Failed to update request. Please ensure the form is valid')
+            messages.error(request, f'Failed to update painting request. Please ensure the form is valid')
     else:
-        form = PaintingEditForm(instance=painting)
+        form = form_class(instance=painting)
 
     context = {
         'form': form,
@@ -74,9 +89,15 @@ def edit_painting(request, painting_id):
 
 
 @login_required
-def delete_painting(request, painting_id):
-    """ Delete a request from the store """
-    painting = get_object_or_404(PaintingRequest, pk=painting_id)
-    painting.delete()
-    messages.success(request, 'Painting request deleted!')
-    return redirect(reverse('profile'))
+def delete_painting(request, painting_id, temporary=False):
+    """ Delete a painting request from the store """
+    if temporary:
+        painting = get_object_or_404(TemporaryPaintingRequest, pk=painting_id)
+        painting.delete()
+        messages.success(request, 'Temporary painting request deleted!')
+    else:
+        painting = get_object_or_404(PaintingRequest, pk=painting_id)
+        painting.delete()
+        messages.success(request, 'Painting request deleted!')
+
+    return redirect('profile')
