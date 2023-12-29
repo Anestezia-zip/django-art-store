@@ -87,9 +87,11 @@ nav-gradient
                                         <p class="small mt-1 mb-0">
                                             {{ product.date_created|date:"d.m.Y" }}
                                         </p>
-                                        <i class="fa-solid fa-heart toggle-wishlist{% if product.id in wishlist_item_ids %} active{% endif %}"
-                                            data-product-id="{{ product.id }}" style="cursor: pointer;">
-                                        </i>
+                                        {% if request.user.is_authenticated %}
+                                            <i class="fa-solid fa-heart toggle-wishlist{% if product.id in wishlist_item_ids %} active{% endif %}"
+                                                data-product-id="{{ product.id }}" style="cursor: pointer;">
+                                            </i>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>

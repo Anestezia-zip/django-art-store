@@ -10,7 +10,9 @@ def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
-    wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
+    wishlist_items = []
+    if request.user.is_authenticated:
+        wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
     query = None
     categories = None
     sort = None
