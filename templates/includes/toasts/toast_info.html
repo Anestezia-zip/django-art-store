@@ -8,19 +8,16 @@
         </button>
     </div>
     <div class="toast-body bg-white">
-        {{ message }}        
+        {{ message }}
     </div>
 </div>
 
-{% block postloadjs %}
-{{ block.super }}
-    <script>
-        function showToast(message) {
+<script>
+    function showToast(message) {
         toast = document.querySelector('toast');
 
-        setTimeout(function() {
+        setTimeout(function () {
             toast.remove();
         }, 2000);
-        }
-    </script>
-{% endblock %}
+    }
+</script>
