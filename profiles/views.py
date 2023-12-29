@@ -13,7 +13,7 @@ def profile(request):
     template = 'profiles/profile.html'
     user_email = request.user.email
     profile = get_object_or_404(UserProfile, user=request.user)
-    painting_requests = PaintingRequest.objects.filter(user=request.user)
+    painting_requests = PaintingRequest.objects.filter(email=user_email)
     temporary_requests = TemporaryPaintingRequest.objects.filter(email=user_email)
 
     if request.method == 'POST':
