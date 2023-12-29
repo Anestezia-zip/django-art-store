@@ -10,3 +10,7 @@ class PaintingRequest(models.Model):
 
     def __str__(self):
         return self.description
+
+
+class TemporaryPaintingRequest(models.Model):
+    email = models.EmailField()

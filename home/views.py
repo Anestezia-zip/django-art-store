@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from .forms import PaintingRequestForm
-from .models import PaintingRequest
+from .models import PaintingRequest, TemporaryPaintingRequest
 from django.contrib import messages
 
 
@@ -17,14 +17,20 @@ def index(request):
 
 
 def create_painting_request(request):
-    initial_email = request.user.email if request.user.is_authenticated else ''
-
     if request.method == 'POST':
         form = PaintingRequestForm(request.POST, request.FILES)
         if form.is_valid():
-            painting_request = form.save(commit=False)
-            painting_request.email = initial_email
-            painting_request.save()
+            if request.user.is_authenticated:
+                # Если пользователь залогинен, сохраняем запрос с привязкой к пользователю
+                painting_request = form.save(commit=False)
+                painting_request.user = request.user
+                painting_request.save()
+            else:
+                # Если пользователь не залогинен, сохраняем запрос временно
+                email = form.cleaned_data.get('email')
+                temporary_request = TemporaryPaintingRequest(email=email)
+                temporary_request.save()
+
             messages.success(request, 'Successfully sent request!')
             if request.user.is_authenticated:
                 return redirect('profile')
@@ -33,7 +39,7 @@ def create_painting_request(request):
         else:
             messages.error(request, 'Failed to send a request. Please ensure the form is valid.')
     else:
-        form = PaintingRequestForm(initial={'email': initial_email})
+        form = PaintingRequestForm()
 
     painting_requests = PaintingRequest.objects.all()
     context = {
