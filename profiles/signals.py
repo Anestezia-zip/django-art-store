@@ -13,7 +13,7 @@ def transfer_temporary_requests(sender, instance, created, **kwargs):
                 email=request.email,
                 description=request.description,
                 size=request.size,
-                add_signature=request.add_signature,
+                add_signature=request.add_signature, 
                 examples=request.examples,
                 examples2=request.examples2
             )
