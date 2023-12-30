@@ -73,6 +73,7 @@ def edit_painting(request, painting_id, temporary=False):
     if request.method == 'POST':
         form = form_class(request.POST, request.FILES, instance=painting)
         if form.is_valid():
+            form.instance.user = request.user
             form.save()
             messages.success(request, 'Successfully updated painting request')
             return redirect('profile')
