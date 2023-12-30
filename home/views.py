@@ -27,8 +27,14 @@ def create_painting_request(request):
                 painting_request.save()
             else:
                 # Если пользователь не залогинен, сохраняем запрос временно
-                email = form.cleaned_data.get('email')
-                temporary_request = TemporaryPaintingRequest(email=email)
+                temporary_request = TemporaryPaintingRequest(
+                    email=form.cleaned_data.get('email'),
+                    description=form.cleaned_data.get('description'),
+                    size=form.cleaned_data.get('size'),
+                    add_signature=form.cleaned_data.get('add_signature'),
+                    examples=form.cleaned_data.get('examples'),
+                    examples2=form.cleaned_data.get('examples2')
+                )
                 temporary_request.save()
 
             messages.success(request, 'Successfully sent request!')
