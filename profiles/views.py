@@ -64,10 +64,10 @@ def edit_painting(request, painting_id, temporary=False):
         - Temporary Painting Request - needed for unregistered users to be able to manage requests during further registration
     """
     if temporary:
-        painting = get_object_or_404(TemporaryPaintingRequest, id=painting_id)
+        painting = get_object_or_404(TemporaryPaintingRequest, pk=painting_id)
         form_class = TemporaryPaintingEditForm
     else:
-        painting = get_object_or_404(PaintingRequest, id=painting_id)
+        painting = get_object_or_404(PaintingRequest, pk=painting_id)
         form_class = PaintingEditForm
 
     if request.method == 'POST':
