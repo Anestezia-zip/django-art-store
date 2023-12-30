@@ -42,7 +42,7 @@ def create_painting_request(request):
             subject = 'New Painting Request'
             message = f'New request received:\n\nDescription: {form.cleaned_data.get("description")}\nSize: {form.cleaned_data.get("size")}\nEmail: {form.cleaned_data.get("email")}'
             email_from = settings.DEFAULT_FROM_EMAIL
-            recipient_list = ['receiver@example.com', ]  # email получателя
+            recipient_list = ['plekatybtc@gmail.com']
             send_mail(subject, message, email_from, recipient_list)
 
             messages.success(request, 'Successfully sent request!')

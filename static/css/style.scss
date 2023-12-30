@@ -1,0 +1,224 @@
+
+*:hover {
+    transition: all .3s ease-in-out;
+}
+
+.mt {
+    &-20 {
+        margin-top: 20px;
+    }
+
+    &-130 {
+        margin-top: 130px;
+    }
+}
+
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.l-spacing {
+    &-2 {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    &-4 {
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+}
+    
+
+.pic-shadow {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.pic-frame {
+    transition: all .3s ease-in-out;
+}
+
+.pic-frame:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/hero-img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+// -------------------------------------- Main Navigation --------------------------------------
+
+.nav-gradient {
+    background: linear-gradient(to right, rgb(255, 186, 133), #87ceeb);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.316);
+}
+
+.navi {
+    background-color: #0000006b;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.fa-xmark {
+    font-size: 22px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.search {
+
+    &-input {
+        width: 80%;
+        padding: 8px 12px;
+        border: 1px solid gray;
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+    }
+
+    &-button {
+        padding: 4px 10px;
+        background-color:#27563A;
+        border: 1px solid #193625;
+        color: #fff;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .fa-search {
+        background-color: #27563A;
+    }
+}
+
+// -------------------------------------- Products --------------------------------------
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #fff;
+    z-index: -1;
+}
+
+.btt-button {
+    width: 42px;
+    height: 42px;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 30px;
+    right: 30px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
+// -------------------------------------- Messages --------------------------------------
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9919;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 124px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        margin-top: 200px;
+    }
+
+    .header-container {
+        padding-top: 70px;
+    }
+}
