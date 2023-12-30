@@ -1,6 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 class PaintingRequest(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='painting_requests')
     email = models.EmailField(verbose_name='Email', default="")
     description = models.TextField(verbose_name='Description of the painting')
     size = models.CharField(max_length=20, verbose_name='Size of the painting')
