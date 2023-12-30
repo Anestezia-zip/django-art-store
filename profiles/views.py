@@ -13,8 +13,6 @@ def profile(request):
     template = 'profiles/profile.html'
     user_email = request.user.email
     profile = get_object_or_404(UserProfile, user=request.user)
-    painting_requests = PaintingRequest.objects.filter(email=user_email)
-    temporary_requests = TemporaryPaintingRequest.objects.filter(email=user_email)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -26,6 +24,17 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
+
+    # Обновляем временные запросы, связывая их с зарегистрированным пользователем
+    if request.user.is_authenticated:
+        user_email = request.user.email
+        temporary_requests = TemporaryPaintingRequest.objects.filter(email=user_email)
+        for temporary_request in temporary_requests:
+            temporary_request.user = request.user
+            temporary_request.save()
+
+    painting_requests = PaintingRequest.objects.filter(email=user_email)
+    temporary_requests = TemporaryPaintingRequest.objects.filter(email=user_email)
 
     context = {
         'form': form,
@@ -73,7 +82,6 @@ def edit_painting(request, painting_id, temporary=False):
     if request.method == 'POST':
         form = form_class(request.POST, request.FILES, instance=painting)
         if form.is_valid():
-            form.instance.user = request.user
             form.save()
             messages.success(request, 'Successfully updated painting request')
             return redirect('profile')

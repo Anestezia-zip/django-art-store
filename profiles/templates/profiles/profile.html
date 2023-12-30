@@ -112,10 +112,10 @@
                     <p class="card-title"><b>Contact e-mail:</b> {{ t.email }}</p>
                     <p class="card-text"><b>Size:</b> {{ t.size }}</p>
                     <div>
-                        {% if r.examples %}
+                        {% if t.examples %}
                             <img width="100" src="{{ t.examples.url }}" alt="Example" class="mx-3">
                         {% endif %}
-                        {% if r.examples2 %}
+                        {% if t.examples2 %}
                             <img width="100" src="{{ t.examples2.url }}" alt="Example2">
                         {% endif %}
                     </div>
