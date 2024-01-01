@@ -66,3 +66,7 @@ def create_painting_request(request):
 
 def gallery(request):
     return render(request, 'home/gallery.html')
+
+
+def animation(request):
+    return render(request, 'home/animation.html')
