@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static sass_tags %}
+{% load static %}
 
 {% block extra_nav_class %}
 nav-gradient
@@ -42,22 +42,30 @@ nav-gradient
                 </p>
                 {% endif %}
                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
-                {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
+                {% if request.user.is_authenticated %}
                 <!-- Star rating -->
                 <form class="rate-form" method="POST" data-product-id="{{ product.id }}">
                     {% csrf_token %}
-                    <button type="button" class="fa fa-star" value="1" id="1"></button>
-                    <button type="button" class="fa fa-star" value="2" id="2"></button>
-                    <button type="button" class="fa fa-star" value="3" id="3"></button>
-                    <button type="button" class="fa fa-star" value="4" id="4"></button>
-                    <button type="button" class="fa fa-star" value="5" id="5"></button>
+                    <button type="button"
+                        class="fa fa-star {% if rating.checked and rating.score >= 1 %}checked{% endif %}" value="1"
+                        id="1"></button>
+                    <button type="button"
+                        class="fa fa-star {% if rating.checked and rating.score >= 2 %}checked{% endif %}" value="2"
+                        id="2"></button>
+                    <button type="button"
+                        class="fa fa-star {% if rating.checked and rating.score >= 3 %}checked{% endif %}" value="3"
+                        id="3"></button>
+                    <button type="button"
+                        class="fa fa-star {% if rating.checked and rating.score >= 4 %}checked{% endif %}" value="4"
+                        id="4"></button>
+                    <button type="button"
+                        class="fa fa-star {% if rating.checked and rating.score >= 5 %}checked{% endif %}" value="5"
+                        id="5"></button>
                 </form>
-                <div id="rating-confirm-box"></div>
+                {% endif %}
+                <p>Average rating: {{ ratingAverage }}</p>
+                <p id="rating-confirm-box"></p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -117,29 +125,33 @@ nav-gradient
                 button.addEventListener('click', (e) => {
                     const value = e.target.value;
                     const productId = form.getAttribute('data-product-id');
-                    console.log(value);
-                    console.log(productId);
 
                     $.ajax({
                         type: 'POST',
-                        url: 'products/rate_product/',
+                        url: '{% url "rate_product" product.id %}',
                         data: {
                             'csrfmiddlewaretoken': csrf[0].value,
                             'value': value,
                         },
                         success: function (response) {
-                            console.log(response);
-                            confirmBox.innerHTML = `<h2>Successfully rated with ${response.score}</h2>`;
+                            confirmBox.innerHTML = `Successfully rated with ${response.score}`;
+                            setTimeout(() => {
+                                confirmBox.style.display = 'none'
+                            }, 4000);
                         },
                         error: function (xhr, status, error) {
                             console.error(xhr.responseText);
-                            confirmBox.innerHTML = `<h2>Oops... Something went wrong</h2>`;
+                            confirmBox.innerHTML = `Oops... Something went wrong`;
+                            setTimeout(() => {
+                                confirmBox.style.display = 'none'
+                            }, 4000);
                         }
                     });
                 });
             }
         }
     });
+
 </script>
 
 {% endblock %}

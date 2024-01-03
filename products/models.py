@@ -47,6 +47,7 @@ class ProductRating(models.Model):
         MaxValueValidator(5),
         MinValueValidator(1)
     ])
+    checked = models.BooleanField(default=False)
 
     class Meta:
         unique_together = ('product', 'user')

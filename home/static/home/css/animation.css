@@ -9,8 +9,9 @@
   z-index: 9999;
   background-color: #000;
   animation: fadeOut .5s forwards;
-  animation-delay: 3.4s;
+  animation-delay: 3s;
   animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+  overflow: hidden;
 }
 
 .grid-container {
@@ -19,8 +20,8 @@
   padding: 40px;
   padding-bottom: 4px;
   animation: expandContainer 1.5s forwards;
-  animation-delay: 2s;
-  animation-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+  animation-delay: 1.2s;
+  animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
 }
 
 @keyframes expandContainer {
@@ -52,20 +53,45 @@
   transform: translateX(-50%);
 }
 
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  color: white;
+  font-size: 1em;
+}
+
+
 /* -------------------- Fly top -------------------- */
 
 #grid-item-1, #grid-item-13, #grid-item-17 { --animation-delay: 0s; --end-bottom: 86%; }
-#grid-item-2, #grid-item-14, #grid-item-18 { --animation-delay: .36s; --end-bottom: 61%; }
-#grid-item-3, #grid-item-15, #grid-item-19 { --animation-delay: .7s; --end-bottom: 36%; }
-#grid-item-4, #grid-item-16, #grid-item-20 { --animation-delay: 1.1s; --end-bottom: 11%; }
+#grid-item-2, #grid-item-14, #grid-item-18 { --animation-delay: .6s; --end-bottom: 61%; }
+#grid-item-3, #grid-item-15, #grid-item-19 { --animation-delay: .65s; --end-bottom: 36%; }
+#grid-item-4, #grid-item-16, #grid-item-20 { --animation-delay: 1.2s; --end-bottom: 11%; }
 
 #grid-item-1, #grid-item-2, #grid-item-3, #grid-item-4,
 #grid-item-13, #grid-item-14, #grid-item-15, #grid-item-16,
 #grid-item-17, #grid-item-18, #grid-item-19, #grid-item-20 {
   bottom: -200px;
   left: 50%;
-  animation: flyUp 2.4s forwards;
+  animation: flyUp 2.2s forwards;
   animation-timing-function: ease;
+  animation-delay: var(--animation-delay);
+}
+
+#grid-item-1, #grid-item-13, #grid-item-17 {
+  animation: flyUp 1.7s forwards;
+}
+
+#grid-item-2, #grid-item-14, #grid-item-18 {
+  animation: flyUp 1.7s forwards;
   animation-delay: var(--animation-delay);
 }
 
@@ -89,16 +115,25 @@
 /* -------------------- Fly down -------------------- */
 
 #grid-item-5, #grid-item-9 { --animation-delay: 0s; --end-top: 76%; }
-#grid-item-6, #grid-item-10 { --animation-delay: .36s; --end-top: 50.5%; }
-#grid-item-7, #grid-item-11 { --animation-delay: .7s; --end-top: 25%; }
-#grid-item-8, #grid-item-12 { --animation-delay: 1.1s; --end-top: 0; }
+#grid-item-6, #grid-item-10 { --animation-delay: .6s; --end-top: 50.5%; }
+#grid-item-7, #grid-item-11 { --animation-delay: .8s; --end-top: 25%; }
+#grid-item-8, #grid-item-12 { --animation-delay: 1.2s; --end-top: 0; }
 
 #grid-item-5, #grid-item-6, #grid-item-7, #grid-item-8,
 #grid-item-9, #grid-item-10, #grid-item-11, #grid-item-12 {
   top: -200px;
   left: calc(50% - 360px);
-  animation: flyDown 2.4s forwards;
+  animation: flyDown 2.2s forwards;
   animation-timing-function: ease;
+  animation-delay: var(--animation-delay);
+}
+
+#grid-item-5, #grid-item-9 {
+  animation: flyDown 1.7s forwards;
+}
+
+#grid-item-6, #grid-item-10 {
+  animation: flyDown 1.7s forwards;
   animation-delay: var(--animation-delay);
 }
 
