@@ -163,7 +163,7 @@ footer {
   white-space: nowrap !important;
 }
 
-@media (max-width: 381px) {
+@media (max-width: 400px) {
   .navbar {
     padding: .5rem 0rem !important;
   }
