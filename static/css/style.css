@@ -165,7 +165,7 @@ footer {
 
 @media (max-width: 400px) {
   .navbar {
-    padding: .5rem 0rem !important;
+    padding: .5rem .5rem !important;
   }
 }
 
@@ -333,7 +333,8 @@ footer {
 }
 
 .submit-btn,
-.logout-btn {
+.logout-btn,
+.primary-btn {
   width: 100%;
   background-color: #27563A;
   color: #fff;
@@ -347,6 +348,12 @@ footer {
 
 .logout-btn {
   width: 250px;
+}
+
+.primary-btn {
+  max-width: 240px;
+  background-color: #f3f3f3;
+  color: #000;
 }
 
 .hero-title {
@@ -1001,6 +1008,12 @@ label[for=id_add_signature] {
 
 .delete-btn:hover {
   background-color: #ffb0b0;
+}
+
+@media (min-width: 992px) {
+  .profile-logo {
+    margin-top: 100px;
+  }
 }
 
 /* -------------------------------- Media Queries */
