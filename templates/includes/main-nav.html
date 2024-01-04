@@ -5,6 +5,13 @@
                 Home
             </a>
         </li>
+        {% if request.user.is_authenticated %}
+        <li class="nav-item d-block d-lg-none">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5 l-spacing-2" href="{% url 'view_wishlist' %}">
+                <p class="my-0">My Wishlist</p>
+            </a>
+        </li>
+        {% endif %}
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-5 text-white l-spacing-2" href="{% url 'products' %}">
                 All
