@@ -412,8 +412,8 @@ footer {
   top: 30px;
   background-color: #fff;
   padding: 30px;
-  width: 86%;
-  height: 628px;
+  width: 94%;
+  height: 600px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -421,6 +421,21 @@ footer {
   text-align: center;
   line-height: 3.5rem;
 }
+
+@media (max-width: 1541px) {
+  .full-width-height {
+    width: 90%;
+    height: 630px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .full-width-height {
+    right: 24px;
+  }
+}
+
 
 @media (max-width: 770px) {
   .full-width-height {
@@ -599,8 +614,7 @@ footer {
   }
 
   .full-width-height {
-    width: 91%;
-    height: 600px;
+    right: 38px;
   }
 }
 
