@@ -165,7 +165,7 @@ footer {
 
 @media (max-width: 381px) {
   .navbar {
-    padding: .5rem 0rem;
+    padding: .5rem 0rem !important;
   }
 }
 
@@ -615,6 +615,8 @@ footer {
 
   .full-width-height {
     right: 38px;
+    width: 92%;
+    height: 600px;
   }
 }
 
