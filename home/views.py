@@ -23,12 +23,12 @@ def create_painting_request(request):
         form = PaintingRequestForm(request.POST, request.FILES)
         if form.is_valid():
             if request.user.is_authenticated:
-                # Если пользователь залогинен, сохраняем запрос с привязкой к пользователю
+                # If the user is logged in, save the request with a user binding
                 painting_request = form.save(commit=False)
                 painting_request.user = request.user
                 painting_request.save()
             else:
-                # Если пользователь не залогинен, сохраняем запрос временно
+                # If the user is not logged in, save the request temporarily
                 temporary_request = TemporaryPaintingRequest(
                     email=form.cleaned_data.get('email'),
                     description=form.cleaned_data.get('description'),

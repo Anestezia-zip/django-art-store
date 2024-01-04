@@ -85,11 +85,17 @@ navi
                 <div class="square-2">
                     <div class="square-3">
                         <h2 class="paint-request-title">Let's discuss your ideas for a future painting</h2>
-                        <form method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
+                        <form id="paint-request-form" method="POST" action="{% url 'create_painting_request' %}" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form | crispy }}
                             <button type="submit" class="submit-btn">Submit</button>
                         </form>
+                        <div id="submit-paint-request-message" style="display: {% if messages %}block{% else %}none{% endif %};">
+                            <p>Thank you, your request has been submitted. If you'd like to edit it, 
+                                please register with the same email.
+                            </p>
+                            <a href="#paint-request-form" id="back-to-form">Back to Form</a>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -269,6 +275,13 @@ navi
                 video.play();
             });
         });
+    });
+
+
+    document.querySelector('#back-to-form').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.querySelector('#submit-paint-request-message').style.display = 'none';
+        document.querySelector('#paint-request-form').scrollIntoView({ behavior: 'smooth' });
     });
 </script>
 
