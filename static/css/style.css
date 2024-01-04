@@ -422,8 +422,30 @@ footer {
   line-height: 3.5rem;
 }
 
+@media (max-width: 770px) {
+  .full-width-height {
+    width: 88.5%;
+    height: 630px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 580px) {
+  .full-width-height {
+    width: 84%;
+  }
+}
+
+@media (max-width: 487px) {
+  .full-width-height {
+    width: 81%;
+    height: 670px;
+  }
+}
+
 #back-to-form {
-  color: #708981;
+  color: #315449;
+  text-decoration: none;
 }
 
 .video-wrapper {
@@ -574,6 +596,11 @@ footer {
     max-width: 260px;
     top: 100px;
     right: 350px;
+  }
+
+  .full-width-height {
+    width: 91%;
+    height: 600px;
   }
 }
 
