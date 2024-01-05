@@ -22,10 +22,9 @@ nav-gradient
 
     <div class="row">
         <div class="col12 col-lg-6">
-            <p>Username: {{ user.username }}</p>
-            <span>Email: {{ user.email }}</span>
+            <p><b class="mr-2">USERNAME:</b> {{ user.username }}</p>
+            <p><b class="mr-2">EMAIL:</b> {{ user.email }}</p>
             <a href="{% url 'account_email' %}">Change email</a><br>
-
             <a href="{% url 'account_change_password' %}">Change password</a><br>
         </div>
     </div>

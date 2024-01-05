@@ -6,10 +6,9 @@
             "sku": "pp5001340155",
             "name": "Silent separation",
             "description": "One day out of the war, mercifully sunset.",
-            "price": 1240,
+            "price": 1840,
             "category": 1,
-            "rating": 4.6,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/separation-sunset.jpg",
             "image": "separation-sunset.jpg"
         }
     },
@@ -22,8 +21,7 @@
             "description": "I would like to immerse in fields so wide,\n Where black earth, fertile land, doth bide.\n Become part of my soul, like rains to the sea,\n In the embrace of nature, forever to be.",
             "price": 1430,
             "category": 1,
-            "rating": 4.6,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/among-suns.jpg",
             "image": "among-suns.jpg"
         }
     },
@@ -33,11 +31,10 @@
         "fields": {
             "sku": "pp5001730010",
             "name": "His red gonfalons",
-            "description": "Sunset paints the sky in hues so grand, /n A canvas ablaze, nature's gentle hand.",
+            "description": "Sunset paints the sky in hues so grand, A canvas ablaze, nature's gentle hand.",
             "price": 1370,
             "category": 1,
-            "rating": 4.7,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/red-gonfalons.jpg",
             "image": "red-gonfalons.jpg"
         }
     },
@@ -46,55 +43,129 @@
         "model": "products.product",
         "fields": {
             "sku": "pp5001890157",
+            "name": "Bridging two worlds",
+            "description": "Sunset river Dnipro in fiery peace.",
+            "price": 2350,
+            "category": 2,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/mediterranean.jpg",
+            "image": "kyiv-sunset-wall.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5201290157",
+            "name": "Ballybunion Cliffs",
+            "description": "Where the waves whisper to the rocks.",
+            "price": 1900,
+            "category": 2,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/ballybunion-cliffs.jpg",
+            "image": "ballybunion-cliffs.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5201290157",
+            "name": "Kilkee cliffs",
+            "description": "The surf dances in an eternal dance with the rugged rocks.",
+            "price": 1850,
+            "category": 2,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/kilkee-cliffs.jpg",
+            "image": "kilkee-cliffs.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5201290157",
+            "name": "Shades of lavender and gold",
+            "description": "Meadows strewn with wildflower hues, \n Nature's soft, untamed muse,",
+            "price": 960,
+            "category": 2,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/red-hands.jpg",
+            "image": "red-hands.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001890157",
             "name": "Mediterranean",
             "description": "I wish it had happened at a different time - not mine",
-            "price": 1360,
+            "price": 2100,
             "category": 2,
-            "rating": 4.0,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/mediterranean.jpg",
             "image": "mediterranean.jpg"
         }
     },
     {
-        "pk": 5,
+        "pk": 9,
         "model": "products.product",
         "fields": {
             "sku": "pp5201290157",
-            "name": "Mediterranean",
-            "description": "I wish it had happened at a different time - not mine",
-            "price": 1300,
+            "name": "At the foot of your soul",
+            "description": "In the valley's embrace, they wander through wildflowers, beneath the mountain's silent ponder",
+            "price": 1200,
             "category": 2,
-            "rating": 4.0,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": ""
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/horses.jpg",
+            "image": "horses.jpg"
         }
     },
     {
-        "pk": 5,
+        "pk": 10,
         "model": "products.product",
         "fields": {
             "sku": "pp5201290157",
-            "name": "Autumn whispers",
-            "description": "A lone house stands sentinel, its golden door a silent beacon",
-            "price": 1660,
+            "name": "At the foot of your soul",
+            "description": "",
+            "price": 960,
             "category": 2,
-            "rating": 4.0,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": ""
+            "image_url": "",
+            "image": ".jpg"
         }
     },
     {
-        "pk": 5,
+        "pk": 11,
         "model": "products.product",
         "fields": {
             "sku": "pp5201290157",
-            "name": "Autumn whispers",
-            "description": "A lone house stands sentinel, its golden door a silent beacon",
-            "price": 1660,
+            "name": "At the foot of your soul",
+            "description": "",
+            "price": 960,
             "category": 2,
-            "rating": 4.0,
-            "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-            "image": ""
+            "image_url": "",
+            "image": ".jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5201290157",
+            "name": "At the foot of your soul",
+            "description": "",
+            "price": 960,
+            "category": 2,
+            "image_url": "",
+            "image": ".jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5201290157",
+            "name": "At the foot of your soul",
+            "description": "",
+            "price": 960,
+            "category": 2,
+            "image_url": "",
+            "image": ".jpg"
         }
     }
 ]
