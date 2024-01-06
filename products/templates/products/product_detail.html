@@ -41,8 +41,8 @@ nav-gradient
                     </a>
                 </p>
                 {% endif %}
-                <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                <p class="mt-3">{{ product.description }}</p>
+                <p class="lead mb-0 text-left">{{ product.price }}€</p>
+                <p class="mt-3">{{ product.description|safe }}</p>
                 {% if request.user.is_authenticated %}
                 <!-- Star rating -->
                 <form class="rate-form" method="POST" data-product-id="{{ product.id }}">

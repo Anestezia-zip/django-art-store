@@ -9,7 +9,7 @@ from django.http import JsonResponse
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('pk')
     wishlist_items = []
     if request.user.is_authenticated:
         wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)

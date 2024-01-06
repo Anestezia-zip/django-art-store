@@ -43,8 +43,8 @@
         "pk": 6,
         "model": "products.category",
         "fields": {
-            "name": "portrait",
-            "friendly_name": "Portrait"
+            "name": "landscapes",
+            "friendly_name": "Landscapes"
         }
     },
     {

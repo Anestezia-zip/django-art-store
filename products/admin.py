@@ -1,10 +1,12 @@
 from django.contrib import admin
 from .models import Product, Category, ProductRating, Wishlist
+from django_summernote.admin import SummernoteModelAdmin
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('sku', 'name', 'category', 'price', 'image',)
+    list_display = ('sku', 'name', 'category', 'price', 'image')
     ordering = ('sku',)
+    summernote_fields = ('description')
 
 
 class CategoryAdmin(admin.ModelAdmin):

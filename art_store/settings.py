@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'sass_processor',
     'crispy_forms',
     'storages',
+    'django_summernote',
 
     # apps
     'home',

@@ -46,7 +46,7 @@
             "name": "Bridging two worlds",
             "description": "Sunset river Dnipro in fiery peace.",
             "price": 2350,
-            "category": 2,
+            "category": 6,
             "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/mediterranean.jpg",
             "image": "kyiv-sunset-wall.jpg"
         }
@@ -55,7 +55,7 @@
         "pk": 5,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
+            "sku": "pp5002111605",
             "name": "Ballybunion Cliffs",
             "description": "Where the waves whisper to the rocks.",
             "price": 1900,
@@ -68,7 +68,7 @@
         "pk": 6,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
+            "sku": "pp5002260206",
             "name": "Kilkee cliffs",
             "description": "The surf dances in an eternal dance with the rugged rocks.",
             "price": 1850,
@@ -81,11 +81,11 @@
         "pk": 7,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
+            "sku": "pp5002440521",
             "name": "Shades of lavender and gold",
-            "description": "Meadows strewn with wildflower hues, \n Nature's soft, untamed muse,",
+            "description": "Meadows strewn with wildflower hues, \n Nature's soft, untamed muse.",
             "price": 960,
-            "category": 2,
+            "category": 6,
             "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/red-hands.jpg",
             "image": "red-hands.jpg"
         }
@@ -94,9 +94,9 @@
         "pk": 8,
         "model": "products.product",
         "fields": {
-            "sku": "pp5001890157",
+            "sku": "pp5002601115",
             "name": "Mediterranean",
-            "description": "I wish it had happened at a different time - not mine",
+            "description": "I wish it had happened at a different time - not mine.",
             "price": 2100,
             "category": 2,
             "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/mediterranean.jpg",
@@ -107,65 +107,262 @@
         "pk": 9,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
-            "name": "At the foot of your soul",
-            "description": "In the valley's embrace, they wander through wildflowers, beneath the mountain's silent ponder",
-            "price": 1200,
-            "category": 2,
-            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/horses.jpg",
-            "image": "horses.jpg"
+            "sku": "pp5002820069",
+            "name": "Reflection",
+            "description": "Where sky meets water, a seamless blend, A dance of light, a silent tryst",
+            "price": 1900,
+            "category": 6,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/reflection.jpg",
+            "image": "reflection.jpg"
         }
     },
     {
         "pk": 10,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
-            "name": "At the foot of your soul",
-            "description": "",
-            "price": 960,
+            "sku": "pp5003070787",
+            "name": "One on one with the tide",
+            "description": "Framed by wildflowers",
+            "price": 2230,
             "category": 2,
             "image_url": "",
-            "image": ".jpg"
+            "image": "framed.jpg"
         }
     },
     {
         "pk": 11,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
-            "name": "At the foot of your soul",
-            "description": "",
-            "price": 960,
+            "sku": "pp5003070787",
+            "name": "Savage",
+            "description": "Weaving the scents and the sound of the surf into an eternal song.",
+            "price": 3440,
             "category": 2,
             "image_url": "",
-            "image": ".jpg"
+            "image": "savage.jpg"
         }
     },
     {
         "pk": 12,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
-            "name": "At the foot of your soul",
+            "sku": "pp5003070787",
+            "name": "Paris Subway",
             "description": "",
-            "price": 960,
-            "category": 2,
+            "price": 2070,
+            "category": 9,
             "image_url": "",
-            "image": ".jpg"
+            "image": "paris-subway.jpg"
         }
     },
     {
         "pk": 13,
         "model": "products.product",
         "fields": {
-            "sku": "pp5201290157",
+            "sku": "pp5002690715",
             "name": "At the foot of your soul",
-            "description": "",
-            "price": 960,
-            "category": 2,
+            "description": "In the valley's embrace, they wander through wildflowers, beneath the mountain's silent ponder.",
+            "price": 1200,
+            "category": 6,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/horses.jpg",
+            "image": "horses.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5002701115",
+            "name": "Greenery",
+            "description": "Light and shadow dance in serene solitude.",
+            "price": 990,
+            "category": 3,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/greenery.jpg",
+            "image": "greenery.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5002820069",
+            "name": "The sight of the evening tide",
+            "description": "The shimmering waters in your veins",
+            "price": 700,
+            "category": 3,
             "image_url": "",
-            "image": ".jpg"
+            "image": "tide.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5002761055",
+            "name": "When the sky paints",
+            "description": "Sleeping spires and towers meet the first rays of the sun, shimmering with gold.",
+            "price": 1010,
+            "category": 1,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/sky-paints.jpg",
+            "image": "sky-paints.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5002820147",
+            "name": "Revelations when you're high",
+            "description":
+                "My freedom begins where many other people's freedom ends. That's roughly what we thought when, once again, after breaking a couple of common sense irrelevant laws about private property, we were sitting on a beautiful house called 'Corona' in the center of Berlin. Public spaces that belong to everyone, but no one is allowed to be there. Because that's the way the world works. But every time I found myself in a different reality, wading through the maze of underground utilities, in which the devil himself would break his neck, or talking on the edge of the roof with friends under the scent of a summer night and watching the last star go out over the city, giving way to a fiery dawn, in these moments I felt truly alive, renewed. This escape from the ordinary saved me.",            
+            "price": 3200,
+            "category": 5,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/kyiv-roof.jpg",
+            "image": "kyiv-roof.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003090182",
+            "name": "Escape from the ordinary",
+            "description": "A city becomes a world when you love one of the people living in it.",
+            "price": 3200,
+            "category": 5,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/kyiv-roof-2.jpg",
+            "image": "kyiv-roof-2.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003090186",
+            "name": "Stuttgard Underground",
+            "description": 
+                "Talking about the growth and development of modern urbanism. Workers weave the fabric of progress here, erecting a subterranean world of steel and light. And you know what's so wonderful about it is that it's still unbuilt.",
+            "price": 3900,
+            "category": 9,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/stutgart-metro.jpg",
+            "image": "stutgart-metro.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003161326",
+            "name": "Berlin Subway",
+            "description": "Forgotten rails frozen in cold reflections",
+            "price": 1590,
+            "category": 9,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/berlin-metro.jpg",
+            "image": "berlin-metro.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003230723",
+            "name": "Petra's spirit",
+            "description": "The sandstones have witnessed centuries of change and countless stories carried by the winds across the desert",
+            "price": 800,
+            "category": 3,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/petra.jpg",
+            "image": "petra.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003270936",
+            "name": "Echoes of the Jordan gorges",
+            "description": "Beneath the crystalline waters of the Jordan Gorge, in his quiet whispering",
+            "price": 1060,
+            "category": 3,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/jordan.jpg",
+            "image": "jordan.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003360384",
+            "name": "Breath of the red rocks",
+            "description": "Golden expanse of Liwa. The sands have been folded into dunes for centuries like pages of history. The wind carries their whispers, slumbering among the golden waves",
+            "price": 3490,
+            "category": 3,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/dune.jpg",
+            "image": "dune.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003440111",
+            "name": "Industrial breath",
+            "description": "Industrial giants loom around like guardians of a bygone era, while nature quietly sings its unquenchable song of life",
+            "price": 2300,
+            "category": 8,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/urban-zone.jpg",
+            "image": "urban-zone.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003540313",
+            "name": "Urban High",
+            "description": "The sweetness of a cool evening hangs in the air, and the sky transitions from daytime azure to evening shades of fire, promising a night full of stars",
+            "price": 2300,
+            "category": 4,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/urban-high.jpg",
+            "image": "urban-high.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003560513",
+            "name": "Railroad rhythm",
+            "description": "Breaking the boundaries of urban space and your possibilities",
+            "price": 4400,
+            "category": 4,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/freighthop.jpg",
+            "image": "freighthop.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003560948",
+            "name": "Alexanderplatz vibes",
+            "description": "We were greeted by a dark sky painted with neon twinkles just in the heart of Berlin",
+            "price": 1250,
+            "category": 4,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/freighthop.jpg",
+            "image": "alexanderplatz.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5003570628",
+            "name": "Dreams on the horizon",
+            "description": "Urban stories told between earth and sky",
+            "price": 1990,
+            "category": 4,
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/freighthop.jpg",
+            "image": "dreams-horizon.jpg"
         }
     }
 ]
