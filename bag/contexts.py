@@ -19,7 +19,7 @@ def bag_contents(request):
         })
 
 
-    delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+    delivery = settings.STANDARD_DELIVERY if bag_items else 0
     grand_total = delivery + total
 
     product_count = len(bag)   

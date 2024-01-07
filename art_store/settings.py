@@ -67,7 +67,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 3
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/profile'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -232,7 +232,7 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STANDARD_DELIVERY_PERCENTAGE = 5
+STANDARD_DELIVERY = 10
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # https://dashboard.stripe.com/

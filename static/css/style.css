@@ -48,6 +48,10 @@ input[type=checkbox] {
   margin-bottom: 20px;
 }
 
+.mb-60 {
+  margin-bottom: 60px;
+}
+
 .ml-20 {
   margin-left: 20px;
 }
@@ -516,7 +520,7 @@ footer {
 }
 
 #back-to-form {
-  color: #315449;
+  color: #1b6dc6;
   text-decoration: none;
 }
 
