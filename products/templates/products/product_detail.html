@@ -6,7 +6,7 @@ nav-gradient
 {% endblock %}
 
 {% block extra_title %}
-    <span class="home-link"> - Home</span>
+<span class="home-link"> - Home</span>
 {% endblock %}
 
 {% block page_header %}
@@ -67,22 +67,27 @@ nav-gradient
                         class="fa fa-star {% if rating.checked and rating.score >= 5 %}checked{% endif %}" value="5"
                         id="5"></button>
                 </form>
+                {% else %}
+                <div class="detail-rate-message">
+                    <button type="button" class="fa fa-star"></button>
+                    <button type="button" class="fa fa-star"></button>
+                    <button type="button" class="fa fa-star"></button>
+                    <button type="button" class="fa fa-star"></button>
+                    <button type="button" class="fa fa-star"></button><br>
+                    To rate you need
+                    <a href="{% url 'account_login' %}" class="dropdown-item" id="rate-login">Login</a> or
+                    <a href="{% url 'account_signup' %}" class="dropdown-item" id="rate-register">Register</a>
+                </div>
                 {% endif %}
                 <!-- {% if ratingAverage != 0 %} -->
-                    <p>Average rating: {{ ratingAverage }}</p>
+                <p>Average rating: {{ ratingAverage }}</p>
                 <!-- {% endif %} -->
                 <p id="rating-confirm-box"></p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-1" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>

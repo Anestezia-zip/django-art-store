@@ -3,9 +3,9 @@ from .models import Product, Category, ProductRating, Wishlist
 from django_summernote.admin import SummernoteModelAdmin
 
 
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ('sku', 'name', 'category', 'price', 'image')
-    ordering = ('sku',)
+class ProductAdmin(SummernoteModelAdmin):
+    list_display = ('name', 'id', 'sku', 'category', 'price', 'image')
+    ordering = ('id',)
     summernote_fields = ('description')
 
 

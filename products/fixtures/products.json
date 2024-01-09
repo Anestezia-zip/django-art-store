@@ -18,7 +18,7 @@
         "fields": {
             "sku": "pp5001600425",
             "name": "Among the suns",
-            "description": "I would like to immerse in fields so wide,\n Where black earth, fertile land, doth bide.\n Become part of my soul, like rains to the sea,\n In the embrace of nature, forever to be.",
+            "description": "I would like to immerse in fields so wide, Where black earth, fertile land, doth bide. Become part of my soul, like rains to the sea, In the embrace of nature, forever to be.",
             "price": 1430,
             "category": 1,
             "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/among-suns.jpg",
@@ -83,7 +83,7 @@
         "fields": {
             "sku": "pp5002440521",
             "name": "Shades of lavender and gold",
-            "description": "Meadows strewn with wildflower hues, \n Nature's soft, untamed muse.",
+            "description": "Meadows strewn with wildflower hues, Nature's soft, untamed muse.",
             "price": 960,
             "category": 6,
             "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/red-hands.jpg",
@@ -125,7 +125,7 @@
             "description": "Framed by wildflowers",
             "price": 2230,
             "category": 2,
-            "image_url": "",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/framed.jpg",
             "image": "framed.jpg"
         }
     },
@@ -138,7 +138,7 @@
             "description": "Weaving the scents and the sound of the surf into an eternal song.",
             "price": 3440,
             "category": 2,
-            "image_url": "",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/savage.jpg",
             "image": "savage.jpg"
         }
     },
@@ -148,10 +148,10 @@
         "fields": {
             "sku": "pp5003070787",
             "name": "Paris Subway",
-            "description": "",
+            "description": "À vaillant coeur rien d'impossible",
             "price": 2070,
             "category": 9,
-            "image_url": "",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/paris-subway.jpg",
             "image": "paris-subway.jpg"
         }
     },
@@ -188,9 +188,9 @@
             "sku": "pp5002820069",
             "name": "The sight of the evening tide",
             "description": "The shimmering waters in your veins",
-            "price": 700,
+            "price": 3700,
             "category": 3,
-            "image_url": "",
+            "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/tide.jpg",
             "image": "tide.jpg"
         }
     },
@@ -268,7 +268,7 @@
             "sku": "pp5003230723",
             "name": "Petra's spirit",
             "description": "The sandstones have witnessed centuries of change and countless stories carried by the winds across the desert",
-            "price": 800,
+            "price": 3800,
             "category": 3,
             "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/petra.jpg",
             "image": "petra.jpg"
@@ -334,7 +334,7 @@
             "name": "Railroad rhythm",
             "description": "Breaking the boundaries of urban space and your possibilities",
             "price": 4400,
-            "category": 4,
+            "category": 7,
             "image_url": "https://artful-urbex.s3.eu-west-1.amazonaws.com/media/freighthop.jpg",
             "image": "freighthop.jpg"
         }

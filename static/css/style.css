@@ -327,6 +327,27 @@ footer {
   font-size: 20px;
 }
 
+#rate-login,
+#rate-register {
+  display: inline;
+  margin-left: 6px;
+  padding: 0;
+  color: #1b6dc6;
+}
+
+.detail-rate-message {
+  color: grey;
+}
+
+.detail-rate-message button {
+  border: none;
+  background-color: none;
+}
+
+.detail-rate-message button:nth-child(5) {
+  margin-right: 8px;
+}
+
 .submit-btn,
 .logout-btn,
 .primary-btn {

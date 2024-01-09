@@ -8,6 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Buy an oil painting in our Urbex art store. Make a gift for your family, friends and those who loves collecting soulful artworks">
+        <meta name="keywords" content="oil paintings for sale, urbex art store, urban exploration art shop, buy a painting online, buy an oil painting, painting shop, are paintings worth buying">
     {% endblock %}
     {% block extra_meta %}{% endblock %}
 
@@ -160,18 +162,6 @@
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
-
-        let lastScrollTop = 0;
-
-        $(window).scroll(function () {
-            let currentScroll = $(this).scrollTop();
-            if (currentScroll > lastScrollTop) {
-                $('header').css('top', '-140px'); // Hiding the header
-            } else {
-                $('header').css('top', '0'); // Showing the header
-            }
-            lastScrollTop = currentScroll;
-        });
     </script>
     {% endblock %}
 </body>
