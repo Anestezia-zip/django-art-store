@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://artful-urbex-3e13a9b6e83c.herokuapp.com/sitemp.xml
