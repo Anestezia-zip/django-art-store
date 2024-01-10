@@ -21,11 +21,15 @@ nav-gradient
     </div>
 
     <div class="row">
-        <div class="col12 col-lg-6">
-            <p><b class="mr-2">USERNAME:</b> {{ user.username }}</p>
-            <p><b class="mr-2">EMAIL:</b> {{ user.email }}</p>
-            <a href="{% url 'account_email' %}">Change email</a><br>
-            <a href="{% url 'account_change_password' %}">Change password</a><br>
+        <div class="col-12 col-lg-6 d-flex justify-content-between">
+            <div>
+                <p><b class="mr-2">USERNAME:</b> {{ user.username }}</p>
+                <p><b class="mr-2">EMAIL:</b> {{ user.email }}</p>
+            </div>
+            <div class="profile-links">
+                <a class="primary-btn" href="{% url 'account_email' %}">Change email</a>
+                <a class="primary-btn" href="{% url 'account_change_password' %}">Change password</a>
+            </div>
         </div>
     </div>
 
@@ -33,7 +37,9 @@ nav-gradient
     <div class="row">
         {% if orders %}
         <div class="col-12 col-lg-6">
+            <hr>
             <p class="text-muted">Order History</p>
+            <hr>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>

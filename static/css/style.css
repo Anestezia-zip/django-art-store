@@ -1094,6 +1094,14 @@ label[for=id_add_signature] {
   background-color: #ffb0b0;
 }
 
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 8px;
+  gap: 6px;
+}
+
 @media (min-width: 992px) {
   .profile-logo {
     margin-top: 100px;
