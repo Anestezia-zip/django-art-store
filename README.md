@@ -2,7 +2,7 @@
 ​
 Welcome to the 
   
-![Am i responsive image](https://res.cloudinary.com/dyadwedsy/image/upload/v1701200804/volunteer/readme/z2n5rwyydjxpp7is66ql.jpg)  
+![Am i responsive image]()  
 ​
 [Click Here To Visit Live Site](https://artful-urbex-3e13a9b6e83c.herokuapp.com/)  
 
