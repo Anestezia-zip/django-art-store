@@ -63,19 +63,20 @@ I used Github and Project Board using Kanban board:
 ### Navigation Bar
 - The navigation bar is located at the very top of each page, and it is a "sticky" navigation bar, i.e. if the page is longer and the user has to scroll down, the navigation bar stays at the top of the page the whole time! The logo is on the left, the navigation links are on the right.
 - The logo is clickable and redirects the user to the home page.
-- When logging in, the user is shown their username and the login/register button is replaced with an exit button. A dropdown menu also appears with a link to "Profile" and "Add New Post".
-- On large and xx-large screens, the navbar is centered on the page and is sized by the bootstrap class.
-- On medium and small screens, the navigation menu is changed to a hamburger menu, which displays all navigation links when clicked.  
+- To the right of the logo is the search bar, inviting users to "Search our paintings," complemented by a search button with a magnifying glass icon for initiating the search.
+- Across the navigation bar, we see well-defined categories: "ALL," "URBAN EXPLORATION," and "NATURE," which organize the site's content into easy-to-navigate sections.
+- The user's account section is positioned on the top right, displaying an icon for "My Account" and a shopping cart. It also shows a balance, which in this case is "0.00 €," indicating the user's current available funds or points.
+- The responsive design of the navigation bar adapts to different screen sizes. On tablets and mobile devices, content is spaced evenly apart and navigation links are collapsed into a hamburger menu that, when clicked, unfolds to show navigation links, providing a mobile-friendly experience.
 
   <details><summary>Navbar</summary>
-  <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700407527/volunteer/readme/navbar_wcg2pj.jpg">
+  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/readme-navbar.png">
   </details>
 
 ### Footer
-- The footer is at the bottom of each page and is in a dark blue-orange color, responsive for tablets and mobile devices.
+- The footer is at the bottom of each page and it is a gradient icon with orange-blue color, responsive for tablets and mobile devices.
 
 ### Home Page
-- The home page has a section with a parallax effect and two buttons that lead to registration. When a user is registered - the buttons disappear. The section is adaptive: it changes the font to a smaller one, as well as the text that was in a row - becomes in a column.  
+- The home page has a section with a parallax effect button that lead to all products. The section is adaptive: it changes the font to a smaller one.
 
   <details><summary>Home page</summary>
   <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700408097/volunteer/readme/hero_mldiqt.jpg">
