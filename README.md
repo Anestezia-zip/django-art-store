@@ -2,7 +2,7 @@
 ​
 Welcome to the Artful Urbex, an exquisite online destination where art meets passion. Our store offers a diverse collection of paintings, each with its own story and beauty. From contemporary artworks to classic masterpieces, our gallery is designed to cater to the varied tastes of art enthusiasts and collectors.
   
-![Am i responsive image]()  
+![Am i responsive image](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/responsive.jpg)  
 ​
 [Click Here To Visit Live Site](https://artful-urbex-3e13a9b6e83c.herokuapp.com/)  
 
@@ -51,7 +51,6 @@ Welcome to the Artful Urbex, an exquisite online destination where art meets pas
 [Back to the table](#table-of-contents)
   
 ### Agile Methodology
-Agile methodology was used in the planning of this project. I found it difficult to work on agile and coding in parallel as I was on team 1 and was aware of the changes, so I found it confusing. Afterwards, however, I developed the habit of adding tasks before directly doing them. 
 I used Github and Project Board using Kanban board:
 
 ![Project Board](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/board.png)  
@@ -80,78 +79,67 @@ After the wire-frames completion, a database schema was created to understand wh
   <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/readme-navbar.png">
   </details>
 
-### Footer
-- The footer is at the bottom of each page and it is a gradient icon with orange-blue color, responsive for tablets and mobile devices.
-
 ### Home Page
-- The home page has a section with a parallax effect button that lead to all products. The section is adaptive: it changes the font to a smaller one.
+Landing page invites you on a visual and interactive journey through our curated gallery of paintings. You'll discover a detailed guide on selecting the right canvas size, an easy-to-use contact form for personalized inquiries, and an insight into the values and artistic vision that shape our gallery. The home page has a adaptive section with a parallax effect button that lead to all products.
 
-  <details><summary>Home page</summary>
-  <img src="">
-  </details>
+- <b>Hero section</b> sets the tone with a compelling proposition to bring the visitor's envisioned artwork to life.
+- <b>Choose Your Perfect Canvas</b> is designed to help customers select the ideal canvas size for their space. With options ranging from compact to expansive, and the ability to visualize each size in a simulated room setting.
+- <b>Painting Request Form</b> - inviting visitors to discuss their ideas for future paintings sits prominently. It offers options to describe the envisioned painting, select a size, and even opt for an artist's signature. The facility to upload examples provides a seamless way for customers to convey their vision.
+- <b>Artistic Philosophy and Showcase</b>. Canvases are described as more than mere art pieces; they're stories, emotions, and memories brought to life. The artwork is presented not just as decoration but as an integral part of the home and life. The section is accentuated with examples of artwork that embody diversity, expression, and eccentricity.
+
+<details><summary>Home page</summary>
+  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/landing-page.png">
+</details>
 ​
 
-    Posts section
+### Products page
+Product page presents a curated selection of paintings that visitors can browse through. The top of the page features a clear categorization that allows users to filter the artwork based on themes such as "Urban Exploration" and "Nature".
 
-- There are adapted cards with user posts, which are arranged in 3 columns on large screens, in 2 columns on medium screens and full width on mobile devices.
-- On this page the user have option to use "search bar" to find specific posts or he can scroll down to search for post that he would like to get more information about it
-- If input on search box is not empty the user will be redirected to the new page which will eaither displayed match post or display message to the user 
-- Posts are displayed in 2 columns with 3 posts per row, each post contains of: image, author, date, indicator of likes and comments and title and brief description 
-- Posts card are scaling up as the user hovers over them and clickable title and ecerpt are transforming to capitalize letter
-- When clicked on title/excerpt user is redirected to another page which will give a user more information about the post.  
+Each painting is accompanied by a title that hints at the scene or sentiment the painting embodies, such as "Silent separation" or "Bridging two worlds", giving a sense of story and emotion behind the work. Pricing is transparent, allowing customers to make informed decisions based on their budget.
 
-  <details><summary>Posts section</summary>
-  <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700408396/volunteer/readme/posts_cxpjto.jpg">
-  </details>
-​
 
-    Map section
-
-- Interactive map of Ukraine, where pointing at the red houses - with the help of hover effect the user sees a modal window with a description of each destruction, and clicking on the modal - will be able to see full-size photos
-
-  <details><summary>Map of Ukraine</summary>
-  <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700411956/volunteer/readme/map_dq8awy.jpg">
+  <details><summary>Products page</summary>
+  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/products.png">
   </details>
 
-### Single post page
-- A user can go to this page by clicking on a photo or title and get a description of a particular post and all the necessary information about it. And also see the date when the post was created.  
+### Products detail page
+The picture details page additionally has a description and the ability to rate the picture from 1 to 5 stars. And also the "Add to bag" button to add the painting to your cart
 
-  <details><summary>Post detail page</summary>
-  <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700408565/volunteer/readme/posts_vs5zn9.jpg">
+  <details><summary>Products detail page</summary>
+  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/detail.jpg">
+  </details>
+
+### Bag page
+One of the main features of an e-commerce platform, the shopping bag shows a list of items that the user has added for purchase. In the shopping cart, the user can see information about what exactly he/she has added, as well as remove a picture from the cart.
+  <details><summary>Bag page</summary>
+  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/bag.jpg">
+  </details>
+
+### Checkout page
+  <details><summary>Checkout page</summary>
+  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/checkout.jpg">
   </details>
 
 ### Profile page
-- The profile page consists of 2 sections:
-    - The first section at the top of the screen displays the user's current information, their avatar and the role they chose when registering. If we click the "Edit profile" button, we see a standard django form that allows the user to change their information about themselves, as well as add a "bio" and profile picture if they want to.
+- The profile page consists the user's current informationand two buttons with which you can change your password or email. Below is the order history and a form with the address
 
 
-        <details><summary>Profile page - User Info</summary>
-        <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700408994/volunteer/readme/posts_flncaq.jpg">
-        </details>  
+    <details><summary>Profile page</summary>
+    <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/profile.jpg">
+    </details>  
 
-    - The bottom section displays the posts that belong to the registered user, as well as the "Add new post" button to add a new post.
-
-         <details><summary>Profile page - User Posts</summary>
-        <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700409043/volunteer/readme/profile_xt1i9j.jpg">
-        </details>  
-
-### Login page
-- The login page is a basic django allauth form, containing 2 input fields for username and password with a "Login" button below it. There is also an option below to log in using google provider.
-- The user also has a link above the form to register on the site if they don't have an account, which redirects the user to the "Register" page.
-
-    <details><summary>Login page</summary>
-    <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700409951/volunteer/readme/profile_vbvusy.jpg">
-    </details>
-
-### Signup page
+### Login and Register page
+- The login page is a basic django allauth form, containing 2 input fields for username and password with a "Login" button below it.
 - The registration page is also a standard django form with all the required fields for user input.
-- The user must enter all information (username, first name, last name, e-mail and password). 
-- After entering all fields and clicking the registration button, the user will be automatically logged in and redirected to the main page of the site.
-- It is also possible to register with the help of Google provider
+- The user must enter all information (username, first name, last name, e-mail and password).
 
-    <details><summary>Sign up page</summary>
-    <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700409973/volunteer/readme/signup_vmssf6.jpg">
+    <details><summary>Login and Register page</summary>
+    <img src="">
     </details>
+
+### Footer
+- The footer has an invitation for visitors to stay in touch with the latest collections, encouraging them to follow the store on Instagram or subscribe to a newsletter. It's at the bottom of each page and it is a gradient icon with orange-blue color, responsive for tablets and mobile devices.
+
 
 [Back to the table](#table-of-contents)
 
@@ -171,26 +159,15 @@ After the wire-frames completion, a database schema was created to understand wh
 [Back to the table](#table-of-contents)
 
 ## Libraries
-- asgiref - A standard Python library to allow for asynchronous web apps and servers to communicate with each other.
-- cachetools - Library providing caching tools and decorators for Python functions.
-- cloudinary - A Python package allowing integration between the application and Cloudinary.
 - coverage - Is a third-party package that helps developers measure code coverage in their Python codebase.
-- debugpy - A debugger for Python that can be used to debug code during execution.
 - dj-database-url - A Django utility to utilise the DATABASE_URL environment variable to configure the Django application. Used with PostgreSQL.
-- dj3-cloudinary-storage - A Django package that facilitates integration with Cloudinary storage.
 - Django - A python package for the Django framework.
 - django-allauth - An integrated set of Django applications addressing user authentication, registration and account management.
-- django-autoslug - Django library for automatically generating slugs for URL-friendly titles.
-- django-ckeditor - Is a third-party package that provides a rich text editor widget for Django web applications.
-- django-debug-toolbar - helps you understand how your application functions and to identify problems. It does so by providing panels that provide debug information about the current request and response.
-- django-js-asset - Django integration for managing JavaScript assets.
-- gunicorn - A Python WSGI HTTP Server for UNIX.
-- oauthlib - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic for Python 3.6+.
+- django-summernote - Is a third-party package that provides a rich text editor widget for Django web applications.
 - psycopg2 - A PostgreSQL database adapter for Python.
 - pytz - A Python package for world timezone definitions, modern and historical.
 - Pillow - A Python Imaging Library adds image processing capabilities
 - sqlparse - A non-validating SQL parser for Python.
-- Unidecode - Transliterates Unicode characters to ASCII, useful for handling non-ASCII characters in text.
 
 [Back to the table](#table-of-contents)
 
