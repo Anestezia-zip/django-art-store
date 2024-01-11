@@ -46,10 +46,7 @@ def create_painting_request(request):
             send_mail(subject, message, email_from, recipient_list)
 
             messages.success(request, 'Successfully sent request!')
-            if request.user.is_authenticated:
-                return redirect('profile')
-            else:
-                return redirect('home')
+            return redirect('home')
         else:
             messages.error(request, 'Failed to send a request. Please ensure the form is valid.')
     else:

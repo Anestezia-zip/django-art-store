@@ -603,7 +603,8 @@ header {
   }
 }
 
-#back-to-form {
+#back-to-form,
+#form-to-profile {
   color: #1b6dc6;
   text-decoration: none;
 }

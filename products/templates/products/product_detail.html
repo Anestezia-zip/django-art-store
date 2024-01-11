@@ -80,7 +80,7 @@ nav-gradient
                 </div>
                 {% endif %}
                 <!-- {% if ratingAverage != 0 %} -->
-                <p>Average rating: {{ ratingAverage }}</p>
+                <p class="average-rating">Average rating: {{ ratingAverage }}</p>
                 <!-- {% endif %} -->
                 <p id="rating-confirm-box"></p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -146,6 +146,8 @@ nav-gradient
                         },
                         success: function (response) {
                             confirmBox.innerHTML = `Successfully rated with ${response.score}`;
+                            document.getElementById('average-rating').innerHTML = `Average Rating: ${response.ratingAverage}`;
+
                             setTimeout(() => {
                                 confirmBox.style.display = 'none'
                             }, 4000);

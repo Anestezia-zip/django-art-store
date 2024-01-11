@@ -92,12 +92,12 @@ navi
                             enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form | crispy }}
-                            <button type="submit" class="submit-btn">Submit</button>
+                            <button type="submit" class="submit-btn paint-request-submit-btn">Submit</button>
                         </form>
                         <div id="submit-paint-request-message" class="full-width-height"
                             style="display: {% if messages %}flex{% else %}none{% endif %};">
                             <p>Thank you, your request has been submitted. If you'd like to edit it,
-                                please register with the same email.
+                                please register with the same email or go to the <a href="{% url 'profile' %}" id="form-to-profile">profile</a>
                             </p>
                             <a href="#paint-request-form" id="back-to-form">Back to Form</a>
                         </div>
@@ -293,7 +293,6 @@ navi
             });
         });
     });
-
 
     document.querySelector('#back-to-form').addEventListener('click', function (event) {
         event.preventDefault();

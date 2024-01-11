@@ -2,8 +2,6 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db.models import Avg
-
 
 
 class Category(models.Model):
@@ -35,9 +33,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
-    def average_rating(self):
-        return ProductRating.objects.filter(product=self).aggregate(Avg("score"))["score__avg"] or 0
+
     
 
 class ProductRating(models.Model):

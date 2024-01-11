@@ -13,7 +13,15 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('friendly_name', 'name',)
 
 
+class ProductRatingAdmin(admin.ModelAdmin):
+    list_display = ('id', 'get_product_name', 'score')
+
+    def get_product_name(self, obj):
+        return obj.product.name
+    get_product_name.short_description = 'Product Name'
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(ProductRating)
+admin.site.register(ProductRating, ProductRatingAdmin)
 admin.site.register(Wishlist)

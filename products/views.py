@@ -4,6 +4,8 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, ProductRating, Wishlist
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+from django.db.models import Avg
 
 
 def all_products(request):
@@ -71,7 +73,10 @@ def product_detail(request, product_id):
     else:
         rating = None
 
-    ratingAverage = product.average_rating()
+    ratingAverage = ProductRating.objects.aggregate(Avg('score'))['score__avg'] or 0
+    if ratingAverage is not None:
+        ratingAverage = round(ratingAverage, 2)
+
     context = {
         'product': product,
         'rating': rating,
@@ -80,19 +85,27 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def rate_product(request, product_id=None):
-    if request.method == 'POST' and request.user.is_authenticated:
+    if request.method == 'POST':
         value = request.POST.get('value')
         product = get_object_or_404(Product, pk=product_id)
         user = request.user
-        rating, created = ProductRating.objects.get_or_create(product=product, user=user)
-        rating.score = value
-        rating.checked = True
-        rating.save()
+
+        rating, created = ProductRating.objects.get_or_create(product=product, user=user, defaults={'score': int(value)})
+        if not created:
+            rating.score = int(value)
+            rating.checked = True
+            rating.save()
+
+        ratingAverage = ProductRating.objects.filter(product=product).aggregate(Avg('score'))['score__avg']
+        ratingAverage = round(ratingAverage, 3) if ratingAverage is not None else 0
+
         return JsonResponse({'success': True, 'score': rating.score})
     return JsonResponse({'success': False})
 
 
+@login_required
 def toggle_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     wishlist_item = Wishlist.objects.filter(user=request.user, product=product).first()
@@ -105,6 +118,7 @@ def toggle_wishlist(request, product_id):
         return JsonResponse({'added': True})
 
 
+@login_required
 def remove_from_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     wishlist_item = Wishlist.objects.filter(user=request.user, product=product).first()
@@ -116,6 +130,7 @@ def remove_from_wishlist(request, product_id):
         return JsonResponse({'removed': False})
 
 
+@login_required
 def view_wishlist(request):
     products = Product.objects.all()
     wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
