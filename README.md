@@ -1,6 +1,6 @@
 # Artful Urbex
 ​
-Welcome to the 
+Welcome to the Artful Urbex, an exquisite online destination where art meets passion. Our store offers a diverse collection of paintings, each with its own story and beauty. From contemporary artworks to classic masterpieces, our gallery is designed to cater to the varied tastes of art enthusiasts and collectors.
   
 ![Am i responsive image]()  
 ​
@@ -54,9 +54,17 @@ Welcome to the
 Agile methodology was used in the planning of this project. I found it difficult to work on agile and coding in parallel as I was on team 1 and was aware of the changes, so I found it confusing. Afterwards, however, I developed the habit of adding tasks before directly doing them. 
 I used Github and Project Board using Kanban board:
 
-![Project Board](https://res.cloudinary.com/dyadwedsy/image/upload/v1700406352/volunteer/readme/board_w2emid.jpg)  
+![Project Board](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/board.png)  
 
 [Back to the table](#table-of-contents)
+
+## Database Schema
+After the wire-frames completion, a database schema was created to understand what models need to be devoloped and what information and data should be stored on the back-end database.
+![Database diagram](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/diagram.png)
+
+## Customer Acquisition
+
+![Facebook](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/fb.png)
 
 ## Features:
 
@@ -79,7 +87,7 @@ I used Github and Project Board using Kanban board:
 - The home page has a section with a parallax effect button that lead to all products. The section is adaptive: it changes the font to a smaller one.
 
   <details><summary>Home page</summary>
-  <img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700408097/volunteer/readme/hero_mldiqt.jpg">
+  <img src="">
   </details>
 ​
 

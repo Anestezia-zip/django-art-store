@@ -1,7 +1,7 @@
 /* ---------------- Common ----------------- */
 
 *:hover {
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 html {
@@ -95,17 +95,71 @@ header {
   transition: top 0.5s;
 }
 
-footer {
+.footer {
   width: 100%;
   margin-top: 50px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+  padding: 10px 30px;
+  box-sizing: border-box;
 }
 
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+.footer-column h2 {
+  margin-top: 0;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media screen and (max-width: 600px) {
+  .footer-row {
+      flex-direction: column;
+  }
+}
+
+
+.footer-text {
+  font-size: 18px;
+}
+
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  max-width: 400px;
+}
+
+.insta-link-text {
+  font-size: 20px;
+  color: #000;
+  margin-left: 8px;
+}
+
+.policy {
+  font-size: 20px;
+}
+
+/* @media (max-width: 991px) {
+  .policy {
+    left: 220px;
+  }
+} */
+
 .fa-brands.fa-instagram {
+  font-size: 30px;
   background: linear-gradient(to right, rgb(255, 186, 133), #87ceeb);
   border-radius: 6px 12px;
   color: #000;
@@ -397,7 +451,7 @@ footer {
 }
 
 .hero-title {
-  max-width: 600px;
+  max-width: 630px;
 }
 
 .hero-img {
