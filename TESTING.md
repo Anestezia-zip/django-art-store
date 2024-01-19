@@ -58,7 +58,7 @@ Google Lighthouse was used to test the performance of the website.
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C]() | ![screenshot](documentation/) | No Errors |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2F) | ![screenshot](documentation/home.jpg) | No Errors |
 | All Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F) | ![screenshot](documentation/image-78.png) | Pass: No Errors |
 | Product Detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fproducts%2F3) | ![screenshot](documentation/product-detail.jpg) | No Errors |
 | Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F%3Fq%3Djacket) | ![screenshot](documentation/image-84.png) | Pass: No Errors |

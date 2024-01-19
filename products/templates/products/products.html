@@ -24,7 +24,7 @@ nav-gradient
         <a class="logo-font font-weight-bold nav-link mr-5 text-black l-spacing-2" href="#" id="sort-all" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sort by
         </a>
-        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+        <div class="dropdown-menu border-0" aria-labelledby="sort-all">
             <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Price (low to high)</a>
             <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">Price (high to low)</a>
             <a href="{% url 'products' %}?sort=date&direction=desc" class="dropdown-item ">Date</a>
