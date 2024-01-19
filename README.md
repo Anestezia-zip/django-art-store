@@ -99,6 +99,8 @@ After the wire-frames completion, a database schema was created to understand wh
 
 ![Facebook](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/fb.png)
 
+[Back to the table](#table-of-contents)
+
 ## Features:
 
 ### Navigation Bar
