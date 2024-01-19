@@ -58,16 +58,10 @@ Google Lighthouse was used to test the performance of the website.
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2F) | ![screenshot](documentation/image-77.png) | Pass: No Errors |
+| Home | [W3C]() | ![screenshot](documentation/) | No Errors |
 | All Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F) | ![screenshot](documentation/image-78.png) | Pass: No Errors |
-| Product Detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F13%2F) | ![screenshot](documentation/image-79.png) | Pass: No Errors |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcontact) | ![screenshot](documentation/image-80.png) | Pass: No Errors |
-| Privacy Policy | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fprivacy_policy) | ![screenshot](documentation/image-81.png) | Pass: No Errors |
-| Returns | [W3C](https://https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Freturns) | ![screenshot](documentation/image-82.png) | Pass: No Errors |
-| Sign Up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/image-86.png) | Pass: No Errors |
-| Sign In | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/image-85.png) | Pass: No Errors |
+| Product Detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fproducts%2F3) | ![screenshot](documentation/product-detail.jpg) | No Errors |
 | Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F%3Fq%3Djacket) | ![screenshot](documentation/image-84.png) | Pass: No Errors |
-| Log Out | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Faccounts%2Flogout%2F) | ![screenshot](documentation/image-83.png) | Pass: No Errors |
 | Basket | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fbag%2F) | ![screenshot](documentation/image-87.png) | Pass: No Errors |
 | Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/image-88.png) | Pass: No Errors|
 | Checkout Success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcheckout%2Fcheckout_success%2FBC80EDE13F7D41A4A98524CDF77A6514) | ![screenshot](documentation/image-89.png) | Pass: No Errors |

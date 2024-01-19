@@ -2,7 +2,7 @@
 ​
 Welcome to the Artful Urbex, an exquisite online destination where art meets passion. Our store offers a diverse collection of paintings, each with its own story and beauty. From contemporary artworks to classic masterpieces, our gallery is designed to cater to the varied tastes of art enthusiasts and collectors.
   
-![Am i responsive image](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/responsive.jpg)  
+![Am i responsive image](documentation/responsive.jpg)  
 ​
 [Click Here To Visit Live Site](https://artful-urbex-3e13a9b6e83c.herokuapp.com/)  
 
@@ -93,11 +93,11 @@ I used Github and Project Board using Kanban board:
 
 # Database Schema
 After the wire-frames completion, a database schema was created to understand what models need to be devoloped and what information and data should be stored on the back-end database.
-![Database diagram](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/diagram.png)
+![Database diagram](documentation/diagram.png)
 
 ## Customer Acquisition
 
-![Facebook](https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/fb.png)
+![Facebook](documentation/fb.png)
 
 [Back to the table](#table-of-contents)
 
@@ -112,7 +112,7 @@ After the wire-frames completion, a database schema was created to understand wh
 - The responsive design of the navigation bar adapts to different screen sizes. On tablets and mobile devices, content is spaced evenly apart and navigation links are collapsed into a hamburger menu that, when clicked, unfolds to show navigation links, providing a mobile-friendly experience.  
 
 <details><summary>Navbar</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/readme-navbar.png">
+  <img src="documentation/readme-navbar.png">
 </details>
 
 
@@ -125,7 +125,7 @@ Landing page invites you on a visual and interactive journey through our curated
 - <b>Artistic Philosophy and Showcase</b>. Canvases are described as more than mere art pieces; they're stories, emotions, and memories brought to life. The artwork is presented not just as decoration but as an integral part of the home and life. The section is accentuated with examples of artwork that embody diversity, expression, and eccentricity.
 
 <details><summary>Home page</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/landing-page.png">
+  <img src="documentation/landing-page.png">
 </details>
 
 
@@ -136,20 +136,20 @@ Each painting is accompanied by a title that hints at the scene or sentiment the
 
 
   <details><summary>Products page</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/products.png">
+  <img src="documentation/products.png">
   </details>
 
 ### Products detail page
 The picture details page additionally has a description and the ability to rate the picture from 1 to 5 stars. And also the "Add to bag" button to add the painting to your cart
 
   <details><summary>Products detail page</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/detail.jpg">
+  <img src="documentation/detail.jpg">
   </details>
 
 ### Bag page
 One of the main features of an e-commerce platform, the shopping bag shows a list of items that the user has added for purchase. In the shopping cart, the user can see information about what exactly he/she has added, as well as remove a picture from the cart.
   <details><summary>Bag page</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/bag.jpg">
+  <img src="documentation/bag.jpg">
   </details>
 
 ### Checkout page
@@ -157,21 +157,21 @@ Displays a form for the customer to complete their order, with fields for enteri
 
 On the right side of the page, there's an order summary for a single item. The bottom of the form includes buttons to adjust the bag or complete the order, with a notice that the card will be charged upon order completion. There's also an option to save the delivery information to the customer's profile.
   <details><summary>Checkout page</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/checkout.jpg">
+  <img src="documentation/checkout.jpg">
   </details>
 
 ### Profile page
 The profile page consists the user's current informationand two buttons with which you can change your password or email. Below is the order history and a form with the address
 
 <details><summary>Profile page</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/profile.jpg">
+  <img src="documentation/profile.jpg">
 </details>  
 
 ### Wishlist page
 Paintings have a filled heart icon on some items, which signifies a feature to add or indicate interest or liking, suggesting that these are items in the user's wishlist. 
 The wishlist page would allow users to keep track of their favorite items and the trash icon will allow you to remove an item from the wishlist.
 <details><summary>Wishlist page</summary>
-  <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/wishlist.jpg">
+  <img src="documentation/wishlist.jpg">
 </details>  
 
 ### Login and Register page
@@ -180,7 +180,7 @@ The wishlist page would allow users to keep track of their favorite items and th
 - The user must enter all information (username, first name, last name, e-mail and password).
 
 <details><summary>Login and Register page</summary>
-    <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/login-register.jpg">
+    <img src="documentation/login-register.jpg">
 </details>
 
 ### Footer
@@ -189,7 +189,7 @@ The wishlist page would allow users to keep track of their favorite items and th
 
 
 <details><summary>Newsletter Subscribtions</summary>
-    <img src="https://artful-urbex.s3.eu-west-1.amazonaws.com/readme-artful-urbex/subscription.jpg">
+    <img src="documentation/subscription.jpg">
 </details>
 
 
@@ -332,4 +332,4 @@ This website is deployed to Heroku from a GitHub repository, the following steps
 - [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments.
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/) for their documentation which was helpfull in creating user authentication.
 
-[Back to the top](#volunteer-force)
+[Back to the top](#artful-urbex)

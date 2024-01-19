@@ -59,12 +59,12 @@ nav-gradient
                     <div class="card h-100 border-0">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid pic-frame" src="{{ product.image.url }}" loading="lazy
+                            <img class="card-img-top img-fluid pic-frame" src="{{ product.image.url }}" loading="lazy"
                                 alt="{{ product.name }} Painting">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" loading="lazy
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" loading="lazy"
                                 alt="{{ product.name }} Painting">
                         </a>
                         {% endif %}
