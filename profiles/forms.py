@@ -39,7 +39,7 @@ class UserProfileForm(forms.ModelForm):
 class PaintingEditForm(forms.ModelForm):
     class Meta:
         model = PaintingRequest
-        fields = '__all__'
+        exclude = ['user']
 
     examples = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
     examples2 = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
@@ -48,7 +48,7 @@ class PaintingEditForm(forms.ModelForm):
 class TemporaryPaintingEditForm(forms.ModelForm):
     class Meta:
         model = TemporaryPaintingRequest
-        fields = '__all__'
+        exclude = ['user']
 
     examples = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
     examples2 = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)

@@ -1,2 +1,7 @@
 User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /profiles/
+Disallow: /checkout/
+Disallow: /admin/
 Sitemap: https://artful-urbex-3e13a9b6e83c.herokuapp.com/sitemp.xml
