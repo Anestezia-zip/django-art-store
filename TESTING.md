@@ -55,36 +55,29 @@ Google Lighthouse was used to test the performance of the website.
 
 #  
 
-<details><summary>Smaller screens Home</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700486061/volunteer/readme/aqbwsefqpg5bibhvcey3.jpg">
-</details>
-<details><summary>Smaller screens Post</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700486364/volunteer/readme/rtwgjiwmwpczug4mpm0k.jpg">
-</details>
-<details><summary>Smaller screens Profile</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700487059/volunteer/readme/er7euwpjebh5q9ar7acs.jpg">
-</details>
-<details><summary>Smaller screens Edit Profile</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700487101/volunteer/readme/rxfrjjpj6d9ammqb3m56.jpg">
-</details>
-<details><summary>Smaller screens Add new post</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700487134/volunteer/readme/fibnd8gbzpwaogkl9oug.jpg">
-</details>
-<details><summary>Smaller screens Edit post</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700488132/volunteer/readme/qh0klrhfuvykmebn73wu.jpg">
-</details>
-<details><summary>Smaller screens Deletion confirmation</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700487177/volunteer/readme/ojvrq1m2vbfx8p7kgy4k.jpg">
-</details>
-<details><summary>Smaller screens Donate</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700487296/volunteer/readme/t0m5nrc0lcqwtzk4odns.jpg">
-</details>
-<details><summary>Smaller screns Login</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700487985/volunteer/readme/q6ln36eh7y9qhu21jwgy.jpg">
-</details>
-<details><summary>Smaller screns Register</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700487940/volunteer/readme/z3n73msvlggpzhoh5weo.jpg">
-</details>  
+
+| Page | W3C URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2F) | ![screenshot](documentation/image-77.png) | Pass: No Errors |
+| All Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F) | ![screenshot](documentation/image-78.png) | Pass: No Errors |
+| Product Detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F13%2F) | ![screenshot](documentation/image-79.png) | Pass: No Errors |
+| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcontact) | ![screenshot](documentation/image-80.png) | Pass: No Errors |
+| Privacy Policy | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fprivacy_policy) | ![screenshot](documentation/image-81.png) | Pass: No Errors |
+| Returns | [W3C](https://https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Freturns) | ![screenshot](documentation/image-82.png) | Pass: No Errors |
+| Sign Up | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Faccounts%2Fsignup%2F) | ![screenshot](documentation/image-86.png) | Pass: No Errors |
+| Sign In | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Faccounts%2Flogin%2F) | ![screenshot](documentation/image-85.png) | Pass: No Errors |
+| Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F%3Fq%3Djacket) | ![screenshot](documentation/image-84.png) | Pass: No Errors |
+| Log Out | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Faccounts%2Flogout%2F) | ![screenshot](documentation/image-83.png) | Pass: No Errors |
+| Basket | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fbag%2F) | ![screenshot](documentation/image-87.png) | Pass: No Errors |
+| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/image-88.png) | Pass: No Errors|
+| Checkout Success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcheckout%2Fcheckout_success%2FBC80EDE13F7D41A4A98524CDF77A6514) | ![screenshot](documentation/image-89.png) | Pass: No Errors |
+| Profile | n/a | ![screenshot](documentation/image-90.png)| Pass: No Errors |
+| Add Product | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2Fadd) | ![screenshot](documentation/image-91.png) | Pass: No Errors |
+| Edit Product | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2Fedit%2F3%2F) | ![screenshot](documentation/image-92.png) | Pass: No Errors |
+| Update Review | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2Fupdate_review%2F15%2F) | ![screenshot](documentation/image-94.png) | Pass: No Errors |
+| Delete Review | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2Fdelete_review%2F15%2F) | ![screenshot](documentation/image-93.png) | Pass: No Errors |
+| Wishlist | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fwishlist%2F) | ![screenshot](documentation/image-95.png) | Pass: No Errors |
+
 
 
 [Back to the table](#table-of-contents)

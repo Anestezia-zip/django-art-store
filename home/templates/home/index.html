@@ -260,7 +260,7 @@ navi
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         if (!localStorage.getItem('animationPlayed')) {
             localStorage.setItem('animationPlayed', 'true');
