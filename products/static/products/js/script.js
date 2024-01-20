@@ -5,7 +5,7 @@ $('.btt-link').click(function (e) {
         top: 0,
         behavior: 'smooth'
     });
-})
+});
 
 // Getting CSRF token from a cookie
 function getCookie(name) {

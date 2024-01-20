@@ -18,11 +18,10 @@ def bag_contents(request):
             'product': product,
         })
 
-
     delivery = settings.STANDARD_DELIVERY if bag_items else 0
     grand_total = delivery + total
 
-    product_count = len(bag)   
+    product_count = len(bag)
 
     context = {
         'bag_items': bag_items,

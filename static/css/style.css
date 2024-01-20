@@ -404,7 +404,7 @@ header {
 
 .detail-rate-message button {
   border: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 .detail-rate-message button:nth-child(5) {

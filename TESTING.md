@@ -53,8 +53,8 @@ Google Lighthouse was used to test the performance of the website.
 |  Images work |  Yes  |  Yes  |  Yes  | Yes   | Yes   | Yes   |   |
 | Forms work  |  Yes  |  Yes  | Yes   | Yes   | Yes   | Yes   |   |  
 
-#  
-
+# Code validation
+## HTML
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
@@ -66,120 +66,74 @@ Google Lighthouse was used to test the performance of the website.
 | Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/checkout-w3c.jpg) | No Errors|
 | Checkout Success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fcheckout%2Fcheckout_success%2F958179) | ![screenshot](documentation/checkout-success.jpg) | No Errors |
 | Profile | n/a | ![screenshot](documentation/profile-w3c.jpg)| No Errors |
-| Edit painting request | n/a | ![screenshot](documentation) | No Errors |
-| Wishlist | n/a | ![screenshot](documentation/image-95.png) | Pass: No Errors |
+| Edit painting request | n/a | ![screenshot](documentation/edit-painting.jpg) | No Errors |
+| Wishlist | n/a | ![screenshot](documentation/wishlist-w3c.jpg) | No Errors |
 
 
 
 [Back to the table](#table-of-contents)
 
-## Code Validation
+## CSS
 
-### HTML Validation
-The [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML of the website.
-Only profile page, I had to copy and paste code as I couldn't test as url page. Any error that is shown in validation test is cause of the Django templates. One particular that is shown accrosss website is **username** as username is displayed on navigation bar upon user login.
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
-<details><summary>Login page</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700492237/volunteer/readme/g8vfhudhwh920n2f84pj.jpg">
-</details>
+| File | Jigsaw URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| base.css | n/a  | ![screenshot](documentation/css.jpg) | No Errors |
+| checkout.css | n/a | ![screenshot](documentation/css.jpg) | No Errors |
+| profile.css | n/a | ![screenshot](documentation/css.jpg) | No Errors |
 
-<details><summary>Logout page</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700492074/volunteer/readme/qiolem93ydgxkcekvlna.jpg">
-</details>
+### JavaScript
 
-<details><summary>Signup page</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700492237/volunteer/readme/g8vfhudhwh920n2f84pj.jpg">
-</details>
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
-<details><summary>Home page</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700490822/volunteer/readme/ebwtd3s3losxat2np6eq.jpg">
-</details>
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| index.html (postloadjs) | ![screenshot](documentation/js-home.jpg)| No Errors |
+| products/script.js | ![screenshot](documentation/js-products.jpg) | No Errors |
+| products-detail.html (postloadjs) | ![screenshot](documentation/js-pr-detail.jpg) | No Errors |
+| bag.html (postloadjs) | ![screenshot](documentation/js-bag.jpg) | No Errors |
+| stripe_elements.js | ![screenshot](documentation/js-stripe.jpg) | Undefined Stripe variable |
 
-<details><summary>Post detail page</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700491952/volunteer/readme/v8tkeovqcxoon51cnuds.jpg">
-</details>
 
-<details><summary>Profile page</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700493650/volunteer/readme/ft0q4zxhyfmxwp2jg66x.jpg">
-</details>
+## Python
 
-<details><summary>Donate page</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700493804/volunteer/readme/jmx3ynzkqikrt5kvxdk9.jpg">
-</details>
+I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-### CSS Validation 
-[Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
-
-<details><summary>CSS Validation</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700494217/volunteer/readme/nqtbcjcborsomhvvpsm1.jpg">
-</details>  
-
-### PEP8 Python
-[PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
-
-<details><summary>Admin</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1701181748/volunteer/readme/mfl9qqyxn6otdqsmykho.jpg">
-</details>
-
-<details><summary>Forms</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1701182024/volunteer/readme/hbw7sbhgisncmgx6ckuy.jpg">
-</details>
-
-<details><summary>Views</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700566387/volunteer/readme/r5risaf5fgxrwown6y6m.jpg">
-</details>
-
-<details><summary>Models</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700562120/volunteer/readme/bammrmn98y5kxkbpmiet.jpg">
-</details>
-
-### JavaScript Validation
-
-[JSHint Static Code Analysis Tool](https://jshint.com/) for JavaScript was used to validate the Javascript file. There was 1 warning for a variable named 'new' and 1 undefined variable. As that code was copied from other websites, I didn't change it as it would affect the code itself. No other errors or warnings are shown.
-
-<details><summary>JS</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700494457/volunteer/readme/iwzhii2z7jzx5mfuksfc.jpg">
-</details>  
-
-[Back to the table](#table-of-contents)
-
-# Testing
-
-## Manual Testing
-
-User Story |  Test | Pass
---- | --- | :---:
-As a **first-time visitor**, I want to understand the purpose of the website and easily navigate through | Once on the homepage, I see a large navigation bar with links, and below the navigation is a large image with hero text and "I can help" and "I need help" buttons Without scrolling further down the page, I can understand the purpose of this site | &check;
-As a **first-time visitor**, I can scroll down the page and see an interactive map | Scrolling down to the bottom of the main page, I see a large interactive map, where I can visit the red icons of houses and see a modal with information about the destruction. Also by clicking on one of them - you can view full-size photos | &check;
-As a **first-time visitor** I want to be able to view the posts so that I would get quick access to relevant information and get a better understanding of the content| I can easily scroll down the page and find posts on different topics. If I want to get more information about a post, I just need to click on its photo or title, which will redirect me to the post_detail page |&check;
-As a **first-time visitor** I want to be able to register an account to have more access to the website | In the navigation bar there is a button 'Register' which will lead me to the register page on which I have to fill in all information to register for the website | &check;
-As a **registered user** I can add, update or delete my posts so that have more control over my content in case of errors, and to have better engagemant with other users | If my post already exists update and delete button should be displayed top right of the card! Clicking on the update icon new template is displayed to update post. Clicking on delete button modal is shown to the user to confirm his actions. Once deleted that post no longer exist.  |&check;
-As a **registered user** I want to be able to update my profile information so that I could change my username, bio, role and add a profile picture | After logging in to the website I can click on the "Profile" in the navbar which will lead me to a profile page. Page is divided into two sections, one is displaying current information for the user and the other gives the user the option to implement CRUD functionality | &check;
-As a **site owner**, I want to be able to create, update and delete posts so that I can control my website content. |After logging in to the admin panel of the website I can navigate myself to Post model and perform CRUD functionality for the posts| &check;
-As a **site owner**, I want to be able to delete users so that I can receive several benefits such as: managing my data, reducing liability & resource optimization| After logging in to the admin panel of the website I can navigate myself to Users which is Django all auth model in which are displayed all registered users, from that model I can either update or delete specific users| &check;
-
-## Automated Testing
-
-I performed several automated tests for views, models and forms. Running all the tests seemed to me a time-consuming and difficult task, although now I understand what testing is and why it is important to create test cases for code.
-
-<details><summary>Admin</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700563887/volunteer/readme/h6zu2bdcm2fedgec3omo.jpg">
-</details>
-
-<details><summary>Forms</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700563247/volunteer/readme/nl8giafbwk4yxsrt8run.jpg">
-</details>
-
-<details><summary>Views</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1701182222/volunteer/readme/v2if9c4vypellpbp9lsk.jpg">
-</details>
-
-<details><summary>Models</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1701182222/volunteer/readme/v2if9c4vypellpbp9lsk.jpg">
-</details>
-
-<details><summary>Coverage Report</summary>
-<img src="https://res.cloudinary.com/dyadwedsy/image/upload/v1700571714/volunteer/readme/xajkqalhbprqgsjkwmdt.jpg">
-</details>
-
-[Back to the top](#table-of-contents)
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| Bag contexts.py | n/a | ![screenshot](documentation/bag-linter.jpg) | No Errors |
+| Bag urls.py | n/a | ![screenshot](documentation/image-109.png) | Pass: No Errors |
+| Bag views.py | n/a | ![screenshot](documentation/image-110.png) | Pass: No Errors |
+| Base urls.py | n/a  | ![screenshot](documentation/image-111.png) | Pass: No Errors |
+| Base views.py | n/a  | ![screenshot](documentation/image-112.png) | Pass: No Errors |
+| Checkout admin.py | n/a  | ![screenshot](documentation/image-113.png) | Pass: No Errors |
+| Checkout forms.py | n/a | ![screenshot](documentation/image-114.png) | Pass: No Errors |
+| Checkout models.py | n/a  | ![screenshot](documentation/image-115.png) | Pass: No Errors |
+| Checkout signals.py | n/a | ![screenshot](documentation/image-116.png) | Pass: No Errors |
+| Checkout urls.py | n/a | ![screenshot](documentation/image-117.png) | Pass: No Errors |
+| Checkout views.py | n/a  | ![screenshot](documentation/image-118.png) | Pass: No Errors |
+| Checkout webhook_handler.py | n/a | ![screenshot](documentation/image-119.png) | Pass: No Errors |
+| Checkout webhooks.py | n/a | ![screenshot](documentation/image-120.png)| Pass: No Errors |
+| Home urls.py | n/a | ![screenshot](documentation/image-121.png) | Pass: No Errors |
+| Home views.py | n/a | !![Alt text](documentation/image-122.png) | Pass: No Errors |
+| Home forms.py | n/a | ![screenshot](documentation/image-123.png) | Pass: No Errors |
+| Home models.py | n/a | ![screenshot](documentation/image-124.png) | Pass: No Errors |
+| Home admin.py | n/a | ![screenshot](documentation/image-125.png) | Pass: No Errors |
+| Products admin.py |  n/a | ![screenshot](documentation/image-126.png) | Pass: No Errors |
+| Products forms.py | n/a | ![screenshot](documentation/image-127.png) | Pass: No Errors |
+| Products models.py |  n/a | ![screenshot](documentation/image-128.png) | Pass: No Errors |
+| Products urls.py | n/a  | ![screenshot](documentation/image-129.png) | Pass: No Errors |
+| Products views.py | n/a  | ![screenshot](documentation/image-130.png) | Pass: No Errors |
+| Products widgets.py | n/a | ![screenshot](documentation/image-131.png)| Pass: No Errors |
+| Profiles forms.py | n/a  | ![screenshot](documentation/image-132.png) | Pass: No Errors |
+| Profiles models.py | n/a| ![screenshot](documentation/image-133.png) | Pass: No Errors |
+| Profiles urls.py | n/a | ![screenshot](documentation/image-134.png) | Pass: No Errors |
+| Profiles views.py | n/a | ![screenshot](documentation/image-135.png) | Pass: No Errors |
+| Wishlist admin.py | n/a  | ![screenshot](documentation/image-136.png) | Pass: No Errors |
+| Wishlist models.py | n/a| ![screenshot](documentation/image-137.png) | Pass: No Errors |
+| Wishlist urls.py | n/a | ![screenshot](documentation/image-138.png) | Pass: No Errors |
+| Wishlist views.py | n/a | ![screenshot](documentation/image-139.png) | Pass: No Errors |
+| Base settings.py | n/a  | ![screenshot]![Alt text](documentation/image-140.png)| Pass: No Errors |
+| Base urls.py | n/a | ![screenshot](documentation/image-141.png) | Pass: No Errors |
+| Base views.py | n/a | ![screenshot](documentation/image-142.png) | Pass: No Errors |
