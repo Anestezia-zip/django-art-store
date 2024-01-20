@@ -59,12 +59,12 @@ Google Lighthouse was used to test the performance of the website.
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2F) | ![screenshot](documentation/home.jpg) | No Errors |
-| All Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F) | ![screenshot](documentation/image-78.png) | Pass: No Errors |
+| All Products | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fproducts%2F) | ![screenshot](documentation/all-products.jpg) | No Errors |
 | Product Detail | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fproducts%2F3) | ![screenshot](documentation/product-detail.jpg) | No Errors |
-| Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2F%3Fq%3Djacket) | ![screenshot](documentation/image-84.png) | Pass: No Errors |
-| Basket | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fbag%2F) | ![screenshot](documentation/image-87.png) | Pass: No Errors |
-| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/image-88.png) | Pass: No Errors|
-| Checkout Success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fcheckout%2Fcheckout_success%2FBC80EDE13F7D41A4A98524CDF77A6514) | ![screenshot](documentation/image-89.png) | Pass: No Errors |
+| Search | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fproducts%2F%3Fq%3Dsunset) | ![screenshot](documentation/search.jpg) | Pass: No Errors |
+| Bag | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fbag%2F) | ![screenshot](documentation/bag-w3c.jpg) | No Errors |
+| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/checkout-w3c.jpg) | No Errors|
+| Checkout Success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fartful-urbex-3e13a9b6e83c.herokuapp.com%2Fcheckout%2Fcheckout_success%2F958179) | ![screenshot](documentation/checkout-success.jpg) | No Errors |
 | Profile | n/a | ![screenshot](documentation/image-90.png)| Pass: No Errors |
 | Add Product | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2Fadd) | ![screenshot](documentation/image-91.png) | Pass: No Errors |
 | Edit Product | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsportswear-ebbdbb6bb6ec.herokuapp.com%2Fproducts%2Fedit%2F3%2F) | ![screenshot](documentation/image-92.png) | Pass: No Errors |

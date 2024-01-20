@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block extra_nav_class %}
+nav-gradient
+{% endblock %}
+
+{% block extra_title %}
+    <span class="home-link"> - Home</span>
+{% endblock %}
+
 {% block content %}
     <div class="container header-container">
         <div class="row">
