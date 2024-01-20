@@ -4,7 +4,7 @@
 
 ## Table of Contents
 - [Browser Compatibility](#browser-compatibility)
-- [Lighthouse Report]
+- [Lighthouse Report](#lighthouse-report)
 - [Responsiveness](#responsiveness)
 - [Code Validation](#code-validation)
   - [HTML Validation](#html)
