@@ -103,24 +103,22 @@ I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | Bag contexts.py | n/a | ![screenshot](documentation/bag-linter.jpg) | No Errors |
-| Bag urls.py | n/a | ![screenshot](documentation/image-109.png) | Pass: No Errors |
-| Bag views.py | n/a | ![screenshot](documentation/image-110.png) | Pass: No Errors |
-| Base urls.py | n/a  | ![screenshot](documentation/image-111.png) | Pass: No Errors |
-| Base views.py | n/a  | ![screenshot](documentation/image-112.png) | Pass: No Errors |
-| Checkout admin.py | n/a  | ![screenshot](documentation/image-113.png) | Pass: No Errors |
-| Checkout forms.py | n/a | ![screenshot](documentation/image-114.png) | Pass: No Errors |
-| Checkout models.py | n/a  | ![screenshot](documentation/image-115.png) | Pass: No Errors |
-| Checkout signals.py | n/a | ![screenshot](documentation/image-116.png) | Pass: No Errors |
-| Checkout urls.py | n/a | ![screenshot](documentation/image-117.png) | Pass: No Errors |
-| Checkout views.py | n/a  | ![screenshot](documentation/image-118.png) | Pass: No Errors |
-| Checkout webhook_handler.py | n/a | ![screenshot](documentation/image-119.png) | Pass: No Errors |
-| Checkout webhooks.py | n/a | ![screenshot](documentation/image-120.png)| Pass: No Errors |
-| Home urls.py | n/a | ![screenshot](documentation/image-121.png) | Pass: No Errors |
-| Home views.py | n/a | !![Alt text](documentation/image-122.png) | Pass: No Errors |
-| Home forms.py | n/a | ![screenshot](documentation/image-123.png) | Pass: No Errors |
-| Home models.py | n/a | ![screenshot](documentation/image-124.png) | Pass: No Errors |
-| Home admin.py | n/a | ![screenshot](documentation/image-125.png) | Pass: No Errors |
-| Products admin.py |  n/a | ![screenshot](documentation/image-126.png) | Pass: No Errors |
+| Bag urls.py | n/a | ![screenshot](documentation/bag-urls-linter.jpg) | No Errors |
+| Bag views.py | n/a | ![screenshot](documentation/bag-view-linter.jpg) | No Errors |
+| Checkout admin.py | n/a  | ![screenshot](documentation//checkout-admin.jpg) | No Errors |
+| Checkout forms.py | n/a | ![screenshot](documentation/checkout-forms.jpg) | No Errors |
+| Checkout models.py | n/a  | ![screenshot](documentation/checkout-models.jpg) | No Errors |
+| Checkout signals.py | n/a | ![screenshot](documentation/checkout-signals.jpg) | No Errors |
+| Checkout urls.py | n/a | ![screenshot](documentation/checkout-urls.jpg) | No Errors |
+| Checkout views.py | n/a  | ![screenshot](documentation/checkout-views.jpg) | No Errors |
+| Checkout webhook_handler.py | n/a | ![screenshot](documentation/webhook.jpg) | No Errors |
+| Checkout webhooks.py | n/a | ![screenshot](documentation/webhooks.jpg)| No Errors |
+| Home urls.py | n/a | ![screenshot](documentation/home-urls.jpg) | No Errors |
+| Home views.py | n/a | ![screenshot](documentation/home-views.jpg) | No Errors |
+| Home forms.py | n/a | ![screenshot](documentation/home-forms.jpg) | No Errors |
+| Home models.py | n/a | ![screenshot](documentation/home-models.jpg) | No Errors |
+| Home admin.py | n/a | ![screenshot](documentation/home-admin.jpg) | No Errors |
+| Products admin.py |  n/a | ![screenshot](documentation) | No Errors |
 | Products forms.py | n/a | ![screenshot](documentation/image-127.png) | Pass: No Errors |
 | Products models.py |  n/a | ![screenshot](documentation/image-128.png) | Pass: No Errors |
 | Products urls.py | n/a  | ![screenshot](documentation/image-129.png) | Pass: No Errors |

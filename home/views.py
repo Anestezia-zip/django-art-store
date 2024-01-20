@@ -23,7 +23,7 @@ def create_painting_request(request):
         form = PaintingRequestForm(request.POST, request.FILES)
         if form.is_valid():
             if request.user.is_authenticated:
-                # If the user is logged in, save the request with a user binding
+                # If the user is logged in, save the request with user binding
                 painting_request = form.save(commit=False)
                 painting_request.user = request.user
                 painting_request.save()
@@ -38,9 +38,14 @@ def create_painting_request(request):
                     examples2=form.cleaned_data.get('examples2')
                 )
                 temporary_request.save()
-            
+
             subject = 'New Painting Request'
-            message = f'New request received:\n\nDescription: {form.cleaned_data.get("description")}\nSize: {form.cleaned_data.get("size")}\nEmail: {form.cleaned_data.get("email")}'
+            message = (
+                f'New request received:\n\n'
+                f'Description: {form.cleaned_data.get("description")}\n'
+                f'Size: {form.cleaned_data.get("size")}\n'
+                f'Email: {form.cleaned_data.get("email")}'
+            )
             email_from = settings.DEFAULT_FROM_EMAIL
             recipient_list = ['plekatybtc@gmail.com']
             send_mail(subject, message, email_from, recipient_list)
@@ -48,7 +53,9 @@ def create_painting_request(request):
             messages.success(request, 'Successfully sent request!')
             return redirect('home')
         else:
-            messages.error(request, 'Failed to send a request. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to send a request. '
+                           'Please ensure the form is valid.')
     else:
         form = PaintingRequestForm()
 
@@ -59,5 +66,3 @@ def create_painting_request(request):
     }
 
     return render(request, 'home/index.html', context)
-
-
