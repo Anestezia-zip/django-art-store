@@ -14,7 +14,9 @@ def all_products(request):
     products = Product.objects.all().order_by('pk')
     wishlist_items = []
     if request.user.is_authenticated:
-        wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
+        wishlist_items = Wishlist.objects.filter(
+            user=request.user
+        ).values_list('product_id', flat=True)
     query = None
     categories = None
     sort = None
@@ -27,7 +29,7 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            elif sortkey == 'date':  
+            elif sortkey == 'date':
                 sortkey = 'date_created'
             elif sortkey == 'category':
                 sortkey = 'category__name'
@@ -36,7 +38,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -45,9 +47,9 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -69,11 +71,16 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if request.user.is_authenticated:
         user = request.user
-        rating = ProductRating.objects.filter(product=product, user=user).first()
+        rating = ProductRating.objects.filter(
+            product=product, user=user
+        ).first()
     else:
         rating = None
 
-    ratingAverage = ProductRating.objects.aggregate(Avg('score'))['score__avg'] or 0
+    ratingAverage = ProductRating.objects.aggregate(
+        Avg('score')
+    )['score__avg'] or 0
+
     if ratingAverage is not None:
         ratingAverage = round(ratingAverage, 2)
 
@@ -92,14 +99,21 @@ def rate_product(request, product_id=None):
         product = get_object_or_404(Product, pk=product_id)
         user = request.user
 
-        rating, created = ProductRating.objects.get_or_create(product=product, user=user, defaults={'score': int(value)})
+        rating, created = ProductRating.objects.get_or_create(
+            product=product, user=user, defaults={'score': int(value)}
+        )
         if not created:
             rating.score = int(value)
             rating.checked = True
             rating.save()
 
-        ratingAverage = ProductRating.objects.filter(product=product).aggregate(Avg('score'))['score__avg']
-        ratingAverage = round(ratingAverage, 3) if ratingAverage is not None else 0
+        ratingAverage = ProductRating.objects.filter(
+            product=product
+        ).aggregate(Avg('score'))['score__avg']
+
+        ratingAverage = round(
+            ratingAverage, 3
+        ) if ratingAverage is not None else 0
 
         return JsonResponse({'success': True, 'score': rating.score})
     return JsonResponse({'success': False})
@@ -108,8 +122,10 @@ def rate_product(request, product_id=None):
 @login_required
 def toggle_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    wishlist_item = Wishlist.objects.filter(user=request.user, product=product).first()
-    
+    wishlist_item = Wishlist.objects.filter(
+        user=request.user, product=product
+    ).first()
+
     if wishlist_item:
         wishlist_item.delete()
         return JsonResponse({'added': False})
@@ -121,7 +137,9 @@ def toggle_wishlist(request, product_id):
 @login_required
 def remove_from_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-    wishlist_item = Wishlist.objects.filter(user=request.user, product=product).first()
+    wishlist_item = Wishlist.objects.filter(
+        user=request.user, product=product
+    ).first()
 
     if wishlist_item:
         wishlist_item.delete()
@@ -133,7 +151,9 @@ def remove_from_wishlist(request, product_id):
 @login_required
 def view_wishlist(request):
     products = Product.objects.all()
-    wishlist_items = Wishlist.objects.filter(user=request.user).values_list('product_id', flat=True)
+    wishlist_items = Wishlist.objects.filter(
+        user=request.user
+    ).values_list('product_id', flat=True)
 
     context = {
         'products': products,

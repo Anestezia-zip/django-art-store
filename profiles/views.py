@@ -20,13 +20,17 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request, 'Update failed. Please ensure the form is valid.'
+            )
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     painting_requests = PaintingRequest.objects.filter(email=user_email)
-    temporary_requests = TemporaryPaintingRequest.objects.filter(email=user_email)
+    temporary_requests = TemporaryPaintingRequest.objects.filter(
+        email=user_email
+    )
 
     context = {
         'form': form,
@@ -63,7 +67,10 @@ def edit_painting(request, painting_id):
             messages.success(request, 'Successfully updated painting request')
             return redirect('profile')
         else:
-            messages.error(request, 'Failed to update request. Please ensure the form is valid')
+            messages.error(
+                request,
+                'Failed to update request. Please ensure the form is valid'
+            )
     else:
         form = PaintingEditForm(instance=painting)
     context = {
